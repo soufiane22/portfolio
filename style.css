@@ -147,3 +147,9 @@
   margin: 10px;
 }
 
+
+.about-information >ul >li > span {
+  color: #2685f8;
+  font-weight: 300;
+}
+
