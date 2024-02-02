@@ -33,10 +33,31 @@
    font-weight: 300;
    padding-left: 30px;
  }
-
- .navigation a:hover{ 
-   color:blueviolet
+ .navigation > a::before {
+  background-color: #fa0;
+  content: "";
+  height: 3px;
+  left: 0;
+  position: absolute;
+  top: 35px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .3s ease;
+  width: 100%;
  }
+
+ /* .navigation a:hover{ 
+  background-color: #fa0;
+  content: "";
+  height: 3px;
+  left: 0;
+  position: absolute;
+  top: 35px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .3s ease;
+  width: 100%;
+ } */
 
  section {
    padding: 100px 200px;
@@ -91,6 +112,8 @@
  .main-btn:hover {
   background-color: #0a49f6;
   transform: scale(1.1);
+  color: white;
+  text-decoration: none;
  }
 
  .social-icons a {
@@ -147,9 +170,18 @@
   margin: 10px;
 }
 
+.aboutme-card {
+  width: 75%;
+  font-size: 12px;
+  line-height: 30px;
+}
 
-.about-information >ul >li > span {
+.info {
   color: #2685f8;
-  font-weight: 300;
+  font-weight: bold;
+  margin-right: 8px;
+}
+ul li {
+  list-style-type : none;
 }
 
