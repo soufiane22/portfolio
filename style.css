@@ -228,3 +228,15 @@
   font-size: 12px;
 }
 
+/* ------------------- Project section style -------------- */
+.project-card{
+  min-height: 410px;
+}
+
+.project2-img {
+  object-fit: cover;
+  width: 467px;
+  height: 219px;
+}
+
+
