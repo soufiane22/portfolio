@@ -136,7 +136,7 @@
   text-align: center;
   font-weight: 600;
   display: block;
-  padding: 0.94em 2.275em;
+  padding: 0.8em 2.275em;
   border-radius: 8px;
   text-decoration: none;
   transition: 0.7s ease ;
@@ -233,7 +233,7 @@
   min-height: 410px;
 }
 
-.project2-img {
+.project-img {
   object-fit: cover;
   width: 467px;
   height: 219px;
