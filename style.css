@@ -116,17 +116,34 @@
   font-weight: 600;
   display: inline-block;
   padding: 0.937em 2.1875em;
-  border-radius: 15px;
+  border-radius: 10px;
   margin-bottom: 40px;
   text-decoration: none;
   transition: 0.7s ease ;
+  /* width: 180px;
+  height: 50px; */
  }
 
- .main-btn:hover {
+ .main-btn:hover, .next-btn:hover {
   background-color: #0a49f6;
   transform: scale(1.1);
   color: white;
   text-decoration: none;
+ }
+ .next-btn{
+  color: #fff;
+  background-color: #2685f8;
+  letter-spacing: 1px;
+  font-weight: 600;
+  display: inline-block;
+  padding: 0.937em 2.1875em;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  text-decoration: none;
+  transition: 0.7s ease ;
+  width: 180px;
+  height: 50px;
+  margin: 30px 10px;
  }
 
  .github-btn{
