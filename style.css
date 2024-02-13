@@ -258,4 +258,9 @@
   line-height: 30px;
  }
 
+ /* ------------------- Project 3 style -------------- */
+ .project3-img{
+  height: 60vh;
+  width: 100%;
+ }
 
