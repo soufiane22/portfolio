@@ -1,0 +1,41 @@
+
+.nav-bar-content{
+    background-color: rgba(73, 73, 73, 0.3) ;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 210px;
+ }
+ .logo{
+    /* 1em = 16px relative to body */ 
+    font-size: 1.8em; 
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color:rgb(0, 136, 226)
+ }
+
+.nav-link{
+    color: rgb(6, 167, 207);
+    text-decoration: none;
+    font-size: 1.1em !important;
+    font-weight: 300;
+    padding-left: 30px;
+  }
+
+  .nav-link::before {
+   background-color: #fa0;
+   content: "";
+   height: 3px;
+   left: 0;
+   position: absolute;
+   top: 35px;
+   transform: scaleX(0);
+   transform-origin: left;
+   transition: transform .3s ease;
+   width: 100%;
+  }
+
