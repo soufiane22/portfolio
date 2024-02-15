@@ -10,9 +10,10 @@
  }
 
  /* .nav-bar {
-  position: fixed;
-  display: block;
-  z-index: 100;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  backdrop-filter: blur(5.5px) !important;
+  -webkit-backdrop-filter: blur(5.5px) !important;
  } */
 
 
@@ -101,7 +102,7 @@
   letter-spacing: 1px;
   font-weight: 600;
   display: inline-block;
-  padding: 0.937em 2.1875em;
+  padding: 0.737em 2.275em;
   border-radius: 8px;
   margin-bottom: 40px;
   text-decoration: none;
@@ -109,6 +110,7 @@
   width: 180px;
   height: 50px;
   margin: 30px 10px;
+  text-wrap: nowrap;
  }
 
  .github-btn{
