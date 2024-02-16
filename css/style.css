@@ -111,6 +111,7 @@
   height: 50px;
   margin: 30px 10px;
   text-wrap: nowrap;
+  white-space: nowrap
  }
 
  .github-btn{
