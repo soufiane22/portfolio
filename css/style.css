@@ -255,6 +255,22 @@
   background-color: rgba(133, 133, 133, 0.3);
   backdrop-filter: blur(5.5px) !important;
  }
+ input,textarea {
+  color: #fff !important;
+  font-size: 0.875rem !important;
+  font-weight: 300 !important;
+  background: transparent !important;
+  border-color: #fff !important;
+  /* border-right: none; */
+  box-shadow: none;
+  letter-spacing: .1rem !important;
+  /* text-transform: uppercase; */
+  padding: .9rem 2.5rem !important;
+ }
+ input{
+   height: 0.9rem;
+ }
+
  input[type=submit]:hover {
   background-color: #45a049;
 }
