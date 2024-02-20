@@ -260,7 +260,8 @@
   font-size: 0.875rem !important;
   font-weight: 300 !important;
   background: transparent !important;
-  border-color: #fff !important;
+  /* border-color: #fff !important; */
+  border: 4px bold #fff !important;
   /* border-right: none; */
   box-shadow: none;
   letter-spacing: .1rem !important;
@@ -269,6 +270,9 @@
  }
  input{
    height: 0.9rem;
+ }
+ .form-control {
+  border: 2px solid #fff !important;
  }
 
  input[type=submit]:hover {
@@ -279,5 +283,11 @@
   border-radius: 5px;
   /* background-color: rgba(204, 240, 255,0.8); */
   padding: 20px;
+}
+
+
+.validity-message{
+  font-size: 9px;
+  color: rgb(180, 6, 6);
 }
 
