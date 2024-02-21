@@ -58,13 +58,20 @@
   letter-spacing: 1px;
   font-weight: 600;
   display: inline-block;
-  padding: 0.937em 2.1875em;
+  padding: 0.9em 2em;
   border-radius: 10px;
   margin-bottom: 40px;
   text-decoration: none;
   transition: 0.7s ease ;
   /* width: 180px;
   height: 50px; */
+ }
+
+ .resume-btn{
+  background-color: #09e9b8 !important;
+ }
+ .resume-btn:hover{
+  background-color: #01b18b !important;
  }
 
  .main-btn:hover, .next-btn:hover {
@@ -254,7 +261,7 @@
   border: 2px solid #fff !important;
  }
  .form-control::placeholder {
-   color: a !important;
+   color: #a9a9a9 !important;
  }
 
  input[type=submit]:hover {
