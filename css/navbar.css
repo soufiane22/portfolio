@@ -1,3 +1,8 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
 body {
   background-color: rgba(0, 0, 0, 0.2) !important;
 }
@@ -64,6 +69,30 @@ body {
 .nav-link:hover::before {
   width: 100%;
 }
+
+.navbar-toggler-icon{
+  color: #fff !important;
+}
+
+.navTrigger {
+  bottom: 0;
+  cursor: pointer;
+  height: 25px;
+  margin: auto;
+  position: absolute;
+  right: 30px;
+  top: 0;
+  width: 30px;
+  display: block;
+}
+
+@media (max-width: 768px){
+  .navTrigger {
+    display: block;
+}
+}
+
+
 
 
 
