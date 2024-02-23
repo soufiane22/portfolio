@@ -2,9 +2,15 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  
+}
+html{
+  min-width: fit-content;
 }
 body {
   background-color: rgba(0, 0, 0, 0.2) !important;
+  width: 100%;
+
 }
 .navbar {
   /* background-color: transparent !important; */
@@ -25,7 +31,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 200px;
+  padding: 10px 100px;
 }
 .logo {
   /* 1em = 16px relative to body */
