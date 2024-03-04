@@ -160,12 +160,19 @@ body {
 /*  Vertical navbar style */
 #verticalNavbarSupportedContent{
   height: 100vh;
-   width: 15%;
+   /* width: 15%; */
 }
 
-#verticalNavbarSupportedContent > div.ul {
+/* #verticalNavbarSupportedContent > div.ul {
   display: ;
+} */
+
+#verticalNavbarSupportedContent > .navbar-nav {
+  height: 70vh;
+  justify-content: space-around;
+  align-items: center;
 }
+
 
 
 @-webkit-keyframes inM {
@@ -364,6 +371,8 @@ font-size: 20px;
   display: block;
 }
 }
+
+
 
 
 

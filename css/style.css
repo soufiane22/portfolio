@@ -293,3 +293,17 @@
   min-height: 5rem;
 }
 
+/*  *********** Vertical sidebar style ************  */
+
+.vertical-nav-bar{
+  margin-top: 75px;
+  position: relative;
+  right: 0px;
+  width: 25%;
+  display: none;
+  /* transition: 0.5s  ease; */
+  /* float: right; */
+}
+.vertical-nav-bar-active{
+  display: block;
+}

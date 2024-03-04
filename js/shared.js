@@ -15,3 +15,15 @@ document.write('<script   src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-
 document.write('<script   src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js" ></' + 'script>');
 
 document.write('  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>')
+
+
+$(document).ready(function() {
+    $('.navTrigger').click(function () {
+        $(this).toggleClass('active');
+         console.log("Clicked menu");
+        $('#vertical-nav-bar').toggleClass('.vertical-nav-bar-active');
+       // $("#navbarSupportedContent").fadeIn();
+     
+     });
+});
+
