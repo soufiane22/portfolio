@@ -10,8 +10,8 @@ html{
 body {
   background-color: rgba(0, 0, 0, 0.2) !important;
   /* width: 100%; */
-
 }
+
 .navbar {
   /* background-color: transparent !important; */
   border: none;
@@ -313,10 +313,6 @@ body {
 }
 
 
-
-
-
-
 .myH2 {
 text-align:center;
 font-size: 4rem;
@@ -334,6 +330,9 @@ font-size: 20px;
 }
 
 @media (max-width: 991px){
+body{
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
   .navTrigger {
     display: block;
 }
