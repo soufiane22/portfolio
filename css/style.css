@@ -16,16 +16,13 @@
    scroll-behavior: smooth;
  }
 
- section {
-   padding: 100px 200px;
- }
 
  header{
   overflow-x: hidden;
  }
 
  .main{
-  width: 100%;
+  /* width: 100%; */
   min-height: 100vh; /* view port */
   display: flex;
   align-items: center;
@@ -34,6 +31,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
+  padding: 100px 200px;
  }
  .project-content {
   width: 100%;
@@ -148,6 +146,8 @@
   margin-bottom: 30px;
 }
 
+/*  Bout Info */
+
 .content {
   display: flex;
   justify-content: center;
@@ -157,7 +157,6 @@
 
 .card {
   background-color: #fff;
-  width: 21.25em;
   box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
   border-radius: 10px;
   padding: 25px;
@@ -167,6 +166,10 @@
 .card-hover:hover {
   transform: scale(1.1);
   transition: 0.7s ease;
+}
+
+.about-information {
+  flex-wrap: wrap;
 }
 
 .icon {
@@ -187,7 +190,7 @@
 }
 
 .aboutme-card {
-  width: 75%;
+  min-width: 75%;
   font-size: 12px;
   line-height: 30px;
 }
@@ -316,4 +319,14 @@
 .vertical-nav-bar-active{
   right: 0% !important;
   z-index: 100;
+}
+
+@media screen and (max-width: 991px) {
+  html {
+    font-size: 14px;
+  }
+  
+  .main{
+    padding: 20px 15px;
+  }
 }
