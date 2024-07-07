@@ -58,7 +58,8 @@
   letter-spacing: 1px;
   font-weight: 600;
   display: inline-block;
-  padding: 0.9em 2em;
+  padding: 0.8em 2em;
+  min-width: 14.3em;
   border-radius: 10px;
   margin-bottom: 40px;
   text-decoration: none;
@@ -72,6 +73,10 @@
  }
  .resume-btn:hover{
   background-color: #01b18b !important;
+ }
+
+ ul{
+  padding-left: 0px;
  }
 
  .main-btn:hover, .next-btn:hover {
@@ -137,13 +142,12 @@
   margin-bottom: 30px;
 }
 
-/*  Bout Info */
+/*  About Info */
 
 .content {
   display: flex;
   justify-content: center;
   flex-direction: row;
-  flex-wrap: wrap;
 }
 
 .card {
@@ -181,7 +185,8 @@
 }
 
 .aboutme-card {
-  min-width: 75%;
+  /* min-width: 75%; */
+  max-width: 60% ;
   font-size: 12px;
   line-height: 30px;
 }
@@ -318,5 +323,14 @@
   
   .main{
     padding: 20px 15px;
+    text-align: center;
+  }
+
+  .aboutme-card {
+    max-width: 90%;
+  }
+
+  content{
+    flex-wrap: wrap;
   }
 }
