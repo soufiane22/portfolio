@@ -3,6 +3,11 @@
  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+ html{
+  overflow-x: hidden;
+ }
+
+
  *{
    font-family: 'Poppins', sans-serif;
    padding: 0px;
@@ -13,6 +18,10 @@
 
  section {
    padding: 100px 200px;
+ }
+
+ header{
+  overflow-x: hidden;
  }
 
  .main{
@@ -297,13 +306,15 @@
 
 .vertical-nav-bar{
   margin-top: 75px;
-  position: relative;
-  right: 0px;
-  width: 25%;
-  display: none;
+  /* position: relative; */
+  width: 18%;
+  height: 100vh;
+  position: absolute;
+  right: -100%;
+  transition: .5s ease;
   /* transition: 0.5s  ease; */
   /* float: right; */
 }
 .vertical-nav-bar-active{
-  display: block;
+  right: 0% !important;
 }
