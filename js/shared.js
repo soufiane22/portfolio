@@ -21,9 +21,13 @@ $(document).ready(function() {
     $('.navTrigger').click(function () {
         $(this).toggleClass('active');
          console.log("Clicked menu");
-        $('#vertical-nav-bar').toggleClass('.vertical-nav-bar-active');
-       // $("#navbarSupportedContent").fadeIn();
-     
+         const $navBar =  $('iframe#vertical-nav-bar', parent.document);
+                if ($navBar.length) {
+                    console.log("Element selected: ", $navBar);
+                    $navBar.toggleClass('vertical-nav-bar-active');
+                } else {
+                    console.log("Element not found");
+                }
      });
 });
 

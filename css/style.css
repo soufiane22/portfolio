@@ -3,6 +3,11 @@
  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+ html{
+  overflow-x: hidden;
+ }
+
+
  *{
    font-family: 'Poppins', sans-serif;
    padding: 0px;
@@ -11,6 +16,21 @@
    scroll-behavior: smooth;
  }
 
+
+ header{
+  overflow-x: hidden;
+ }
+
+ section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 7rem 0;
+ }
+
+ .section_content {
+  width: 80%;
+ }
 
  .main{
   /* width: 100%; */
@@ -23,7 +43,10 @@
   background-position: center;
   background-attachment: fixed;
   padding: 100px 200px;
+  margin-top: 0px !important;
+  justify-content: start;
  }
+
  .project-content {
   width: 100%;
   min-height: 100vh;
@@ -147,7 +170,12 @@
 .content {
   display: flex;
   justify-content: center;
-  flex-direction: row;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+}
+
+.services > .card {
+  width: 30%;
 }
 
 .card {
@@ -155,7 +183,8 @@
   box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
   border-radius: 10px;
   padding: 25px;
-  margin: 15px;
+  margin: 15px; 
+  height: 100%;
 }
 
 .card-hover:hover {
@@ -186,7 +215,7 @@
 
 .aboutme-card {
   /* min-width: 75%; */
-  max-width: 60% ;
+  /* max-width: 60% ; */
   font-size: 12px;
   line-height: 30px;
 }
@@ -198,6 +227,9 @@
   font-family: "Roboto", sans-serif;
   font-style: normal;
 }
+ul{
+  padding-left: 0px !important;
+}
 .info1  ul li {
   list-style-type : none;
 }
@@ -206,7 +238,7 @@
 }
 
 #projects { 
-  font-size: 12px;
+  /* font-size: 12px; */
 }
 
 /* ------------------- Project section style -------------- */
@@ -253,6 +285,7 @@
   font-family: "Roboto", sans-serif;
   font-weight: bolder;
   font-style: normal;
+  padding: 3rem;
  }
 
  input,textarea {
@@ -287,7 +320,10 @@
 .contact-from {
   border-radius: 5px;
   /* background-color: rgba(204, 240, 255,0.8); */
-  padding: 20px;
+}
+
+.card-info{
+  display: inline-grid;
 }
 
 
@@ -305,21 +341,37 @@
 
 .vertical-nav-bar{
   margin-top: 75px;
-  position: relative;
-  right: 0px;
-  width: 25%;
-  display: none;
-  /* transition: 0.5s  ease; */
-  /* float: right; */
+  width: 18%;
+  height: 100vh;
+  position:  fixed;
+  right: -100%;
+  transition: .5s ease;
+
 }
 .vertical-nav-bar-active{
-  display: block;
+  right: 0% !important;
+  z-index: 100;
 }
 
 @media screen and (max-width: 991px) {
   html {
     font-size: 14px;
   }
+
+  /* section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+   } */
+  
+   .section_content {
+    width: 95%;
+   }
+   .card {
+    width: 95%;
+    height: auto;
+   }
   
   .main{
     padding: 20px 15px;

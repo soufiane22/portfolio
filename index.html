@@ -21,11 +21,12 @@
 
 </head>
 <header>
-  <iframe src="nav-bar.html" width="100%" height="75" class="nav-bar" frameborder="0" style="position: fixed; z-index: 100;  background: rgba(0, 0, 0,.03) !important;
+  <iframe src="nav-bar.html" width="100%" height="75" class="nav-bar" frameborder="0" 
+  style="position: fixed; z-index: 100;  background: rgba(0, 0, 0,.03) !important;
         backdrop-filter: blur(5.5px) !important; "></iframe>
 
-  <iframe src="vertical-navbar.html" width="20%" height="100%" id="vertical-nav-bar" class="vertical-nav-bar" frameborder="0"
-    style="position: fixed; z-index: 100; "></iframe>
+  <iframe src="vertical-navbar.html"  id="vertical-nav-bar"
+   class="vertical-nav-bar" frameborder="0"></iframe>
 </header>
 
 <body>
@@ -54,41 +55,43 @@
 
 
   <!-- About me  -->
-  <section id="aboutMe" name="aboutMe" class="aboutMe mt-4">
-    <h2 class="title">About Me</h2>
-    <div class="content">
-      <div class="card  aboutme-card">
-        <div class="row">
-          <div class="col-md-3 d-flex justify-content-center align-items-center ">
-            <!-- <img src="./images/profile.jpg" alt="profile" width="180px" height="180px" class="rounded "> -->
-          </div>
-          <div class="col-md-9">
-            <h5>Hello I'm <span style="color:#2685f8 ">software engineer </span> </h5>
-            <p>
-              passionate about new technologies, I develop web and mobile solutions I can take your idea and transform
-              it into an application, I like complicated and challenging requests and problem-solving.
-              Thank you for visiting my profile.
-            </p>
-
-            <div class="about-information d-flex justify-content-between ">
-              <div class="info1">
-                <ul>
-                  <li><span class="info me-2">Age: </span> 26 </li>
-                  <li><span class="info me-2">Languages: </span> English,French,Arabic </li>
-                  <li><span class="info me-2">Level of education: </span> Master's degree in computer and mobile systems
-                  </li>
-
-                </ul>
-              </div>
-              <div class="info2">
-                <ul>
-                  <li><span class="info">Phone: </span> +212641185680 </li>
-                  <li style="text-wrap: nowrap;"><span class="info">Email: </span>soufiane.alouielidrissi@etu.uae.ac.ma
-                  </li>
-                  <li> <span class="info">Location: </span> Tangier,Morocco </li>
-                </ul>
-
-
+  <section id="aboutMe" name="aboutMe">
+    <div class="section_content">
+      <h2 class="title">About Me</h2>
+      <div class="content">
+        <div class="card  aboutme-card">
+          <div class="row">
+            <div class="col-md-3 d-flex justify-content-center align-items-center ">
+              <img src="./images/profile.jpg" alt="profile" width="180px" height="180px" class="rounded ">
+            </div>
+            <div class="col-md-9">
+              <h5>Hello I'm <span style="color:#2685f8 ">software engineer </span> </h5>
+              <p>
+                passionate about new technologies, I develop web and mobile solutions I can take your idea and transform
+                it into an application, I like complicated and challenging requests and problem-solving.
+                Thank you for visiting my profile.
+              </p>
+  
+              <div class="about-information d-flex justify-content-between ">
+                <div class="info1">
+                  <ul>
+                    <li><span class="info me-2">Age: </span> 26 </li>
+                    <li><span class="info me-2">Languages: </span> English,French,Arabic </li>
+                    <li><span class="info me-2">Level of education: </span> Master's degree in computer and mobile systems
+                    </li>
+  
+                  </ul>
+                </div>
+                <div class="info2">
+                  <ul>
+                    <li><span class="info">Phone: </span> +212641185680 </li>
+                    <li style="text-wrap: nowrap;"><span class="info">Email: </span>soufiane.alouielidrissi@etu.uae.ac.ma
+                    </li>
+                    <li> <span class="info">Location: </span> Tangier,Morocco </li>
+                  </ul>
+  
+  
+                </div>
               </div>
             </div>
           </div>
@@ -99,146 +102,159 @@
 
   <!-- Services -->
   <section class="cards" id="services" name="services">
-    <h2 class="title">Services</h2>
-    <div class="content">
-      <div class="card card-hover">
-        <div class="icon">
-          <i class="fa-solid fa-code"></i>
+    <div class="section_content">
+      <h2 class="title">Services</h2>
+      <div class="row content">
+        <div class="col-md-4">
+          <div class="card card-hover">
+            <div class="icon">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <div class="info">
+              <h3>Web Development</h3>
+              <p>I excel in designing and coding web sites and web applications that cater to the specific user's
+                requirements</p>
+            </div>
+          </div>
         </div>
-        <div class="info">
-          <h3>Web Development</h3>
-          <p>I excel in designing and coding web sites and web applications that cater to the specific user's
-            requirements</p>
+        <div class="col-md-4">
+          <div class="card card-hover">
+            <div class="icon">
+              <i class="fa-solid fa-mobile"></i>
+            </div>
+            <div class="info">
+              <h3>Mobile Development</h3>
+              <p> I create innovative and user-friendly mobile applications for Android platforms.
+                With a focus on both front-end design and back-end functionality</p>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="card card-hover">
-        <div class="icon">
-          <i class="fa-solid fa-mobile"></i>
-        </div>
-        <div class="info">
-          <h3>Mobile Development</h3>
-          <p> I create innovative and user-friendly mobile applications for Android platforms.
-            With a focus on both front-end design and back-end functionality</p>
-        </div>
-      </div>
-
-      <div class="card card-hover">
-        <div class="icon">
-          <i class="fa-solid fa-gears"></i>
-        </div>
-        <div class="info">
-          <h3>Software Testing and Maintenance </h3>
-          <p>I excel in maintaining and enhancing software applications to ensure their continued performance and
-            relevance </p>
+        <div class="col-md-4">
+          <div class="card card-hover">
+            <div class="icon">
+              <i class="fa-solid fa-gears"></i>
+            </div>
+            <div class="info">
+              <h3>Software Testing and Maintenance </h3>
+              <p>I excel in maintaining and enhancing software applications to ensure their continued performance and
+                relevance </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
 
   </section>
 
   <!-- Projects -->
 
   <section class="project" id="projects" name="projects">
-    <h2 class="title">Projects</h2>
-    <div class="content">
-      <div class="row w-100 m-0">
-        <!-- Project 1 -->
-        <div class="col-md-4">
-          <div class="card p-2  project-card card-hover">
-            <img class="card-img-top img-fluid project-img" src="./images/project1.png" alt="Card image cap">
-            <div class="card-body ">
-              <h6 class="card-title">Production management web application</h6>
-              <p class="card-text">A Web application for managing the production process,
-                and tracking the productivity of manufacturing lines. </p>
-              <a href="./project1.html" class="btn btn-primary">Details</a>
+    <div class="section_content">
+      <h2 class="title">Projects</h2>
+      <div class="row content">
+          <!-- Project 1 -->
+          <div class="col-md-4">
+            <div class="card p-2  project-card card-hover">
+              <img class="card-img-top img-fluid project-img" src="./images/project1.png" alt="Card image cap">
+              <div class="card-body ">
+                <h6 class="card-title">Production management web application</h6>
+                <p class="card-text">A Web application for managing the production process,
+                  and tracking the productivity of manufacturing lines. </p>
+                <a href="./project1.html" class="btn btn-primary">Details</a>
+              </div>
             </div>
           </div>
-        </div>
-        <!-- Project 2 -->
-        <div class="col-md-4 ">
-          <div class="card p-2  project-card card-hover">
-            <img class="card-img-top img-fluid project-img" src="./images/Project2/project-2.png" alt="Card image cap"
-              width="467px" height="219px">
-            <div class="card-body">
-              <h6 class="card-title">Production Team Lead mobile application</h6>
-              <p class="card-text">An Android application for the entry of working hours and details for each
-                fabrication order(OF),
-                as well as the declaration of employee presence.</p>
-              <a href="./project2.html" class="btn btn-primary">Details</a>
+          <!-- Project 2 -->
+          <div class="col-md-4 ">
+            <div class="card p-2  project-card card-hover">
+              <img class="card-img-top img-fluid project-img" src="./images/Project2/project-2.png" alt="Card image cap"
+                width="467px" height="219px">
+              <div class="card-body">
+                <h6 class="card-title">Production Team Lead mobile application</h6>
+                <p class="card-text">An Android application for the entry of working hours and details for each
+                  fabrication order(OF),
+                  as well as the declaration of employee presence.</p>
+                <a href="./project2.html" class="btn btn-primary">Details</a>
+              </div>
             </div>
           </div>
-        </div>
-        <!-- Project 3 -->
-        <div class="col-md-4 project-card">
-          <div class="card p-2  project-card card-hover">
-            <img class="card-img-top img-fluid" src="./images/Project3/Project3.PNG" alt="Card image cap w-100">
-            <div class="card-body">
-              <h6 class="card-title">Auto Repair Manage</h6>
-              <p class="card-text">
-                A Desktop application developed with JavaFX for managing the mechanic repairs,
-                and the stock pieces.
-              </p>
-              <a href="./project3.html" class="btn btn-primary">Details</a>
+          <!-- Project 3 -->
+          <div class="col-md-4 project-card">
+            <div class="card p-2  project-card card-hover">
+              <img class="card-img-top img-fluid" src="./images/Project3/Project3.PNG" alt="Card image cap w-100">
+              <div class="card-body">
+                <h6 class="card-title">Auto Repair Manage</h6>
+                <p class="card-text">
+                  A Desktop application developed with JavaFX for managing the mechanic repairs,
+                  and the stock pieces.
+                </p>
+                <a href="./project3.html" class="btn btn-primary">Details</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
 
   </section>
 
   <!-- Contact -->
   <section class="cards contact" id="contact" name="contract"
     style="background: url(images/message.png) 50% 0 no-repeat fixed;">
-    <h2 class="title text-white">Contact Me</h2>
-    <div class="container contact-from">
-      <div class="row contact-content">
-        <div class="col-md-4">
-          <div class="card">
-            <div class="info mb-4">
-              <i class="fa-solid fa-mobile-screen fs-3 mb-1"></i>
-              <p>+212 641185680</p>
+    <div class="section_content">
+      <h2 class="title text-white">Contact Me</h2>
+      <div class="container contact-from">
+        <div class="row contact-content">
+          <div class="col-md-5">
+            <div class="card mt-0 card-info">
+              <div class="info text-nowrap">
+                <i class="fa-solid fa-mobile-screen fs-3 mb-1"></i>
+                <p>+212 641185680</p>
+              </div>
+              <div class="info  text-nowrap">
+                <i class="fa-solid fa-envelope fs-3 mb-1"></i>
+                <p style="font-size: smaller;">soufiane.alouielidrissi@etu.uae.ac.ma</p>
+              </div>
+              <div class="info">
+                <i class="fa-solid fa-map-marker-alt fs-3 mb-1"></i>
+                <p style="font-size: smaller;">Tangier, Morocco</p>
+              </div>
             </div>
-            <div class="info mb-4">
-              <i class="fa-solid fa-envelope fs-3 mb-1"></i>
-              <p style="font-size: smaller;">soufiane.alouielidrissi@etu.uae.ac.ma</p>
-            </div>
-            <div class="info mb-4">
-              <i class="fa-solid fa-map-marker-alt fs-3 mb-1"></i>
-              <p style="font-size: smaller;">Tangier, Morocco</p>
+  
+  
+          </div>
+          <div class="col-md-7">
+            <div class="contact-from">
+              <form action="https://api.web3forms.com/submit" method="POST" id="contactForm" class="needs-validation">
+                <input type="hidden" name="access_key" value="139266ca-09b8-46c9-8f03-d37acfbd777e">
+                <div class="form-group mb-3">
+                  <input class="form-control mb-1" type="text" id="name" name="name" placeholder="Your name" required>
+                  <span id="nameValidityMessage" class="validity-message"></span>
+                </div>
+                <div class="form-group mb-3">
+                  <input class="form-control mb-3 " type="email" id="email" name="email" placeholder="Your email"
+                    required>
+                  <span id="emailValidityMessage" class="validity-message"></span>
+                </div>
+                <div class="form-group mb-3">
+                  <textarea id="message" class="form-control mb-3" name="message" placeholder="Your message" rows="5"
+                    required></textarea>
+                  <span id="messageValidityMessage" class="validity-message"></span>
+                </div>
+                <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                <button id="send-message" type="submit" class="btn btn-primary float-right">Send Message</button>
+              </form>
+  
             </div>
           </div>
-
-
         </div>
-        <div class="col-md-8">
-          <div class="container contact-from">
-            <form action="https://api.web3forms.com/submit" method="POST" id="contactForm" class="needs-validation">
-              <input type="hidden" name="access_key" value="139266ca-09b8-46c9-8f03-d37acfbd777e">
-              <div class="form-group mb-3">
-                <input class="form-control mb-1" type="text" id="name" name="name" placeholder="Your name" required>
-                <span id="nameValidityMessage" class="validity-message"></span>
-              </div>
-              <div class="form-group mb-3">
-                <input class="form-control mb-3 " type="email" id="email" name="email" placeholder="Your email"
-                  required>
-                <span id="emailValidityMessage" class="validity-message"></span>
-              </div>
-              <div class="form-group mb-3">
-                <textarea id="message" class="form-control mb-3" name="message" placeholder="Your message" rows="5"
-                  required></textarea>
-                <span id="messageValidityMessage" class="validity-message"></span>
-              </div>
-              <input type="hidden" name="redirect" value="https://web3forms.com/success">
-              <button id="send-message" type="submit" class="btn btn-primary float-right">Send Message</button>
-            </form>
-
-          </div>
-        </div>
+  
       </div>
-
     </div>
+
 
   </section>
 
