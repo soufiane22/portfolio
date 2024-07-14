@@ -149,12 +149,19 @@
   text-decoration: none;
  }
 
+ .social-icons {
+  display: flex;
+  justify-content: start;
+ }
+
  .social-icons a {
   color: #fff;
   font-size: 1.7em;
-  padding-right: 30px;
+  /* padding-right: 30px; */
   text-decoration: none;
+  margin-inline: 1.3rem;
  }
+ 
 
 .title { 
   display: flex;
@@ -341,7 +348,7 @@ ul{
 
 .vertical-nav-bar{
   margin-top: 75px;
-  width: 18%;
+  width: 25%;
   height: 100vh;
   position:  fixed;
   right: -100%;
@@ -355,7 +362,7 @@ ul{
 
 @media screen and (max-width: 991px) {
   html {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   /* section{
@@ -378,11 +385,20 @@ ul{
     text-align: center;
   }
 
+  .social-icons{
+    display: flex;
+    justify-content: center !important;
+  }
+
   .aboutme-card {
     max-width: 90%;
   }
 
   content{
     flex-wrap: wrap;
+  }
+
+  .contact {
+    padding: 1rem;
   }
 }
