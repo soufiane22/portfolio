@@ -367,11 +367,13 @@ ul{
 }
 
 footer{
-  height: 25vh;
+  min-height: max-content;
   width: 100%;
 }
- footer > iframe{
+ .footer_content{ 
   height: 100%;
+  box-sizing: border-box;
+  min-height: 25vh;
 }
 
 @media screen and (max-width: 991px) {
