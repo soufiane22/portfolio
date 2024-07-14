@@ -5,6 +5,12 @@
 
  html{
   overflow-x: hidden;
+
+ }
+
+ body{
+  height: 100%;
+  border: 2px solid yellow;
  }
 
 
@@ -358,6 +364,14 @@ ul{
 .vertical-nav-bar-active{
   right: 0% !important;
   z-index: 100;
+}
+
+footer{
+  height: 25vh;
+  width: 100%;
+}
+ footer > iframe{
+  height: 100%;
 }
 
 @media screen and (max-width: 991px) {
