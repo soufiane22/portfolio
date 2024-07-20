@@ -34,7 +34,7 @@ $(document).ready(function() {
         var iframe = document.getElementById('footer_content');
         iframe.style.height = iframe.contentWindow.document.documentElement.scrollHeight + 'px';
     }
-
+    if(document.getElementById('footer_content'))
     document.getElementById('footer_content').onload = resizeIframe;
 });
 

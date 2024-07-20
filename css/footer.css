@@ -33,6 +33,12 @@ ul li {
     margin-block: 10px;
 }
 
+h2{
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
 .link_item{
     text-decoration: none;
     font-size: 1.2rem;
@@ -41,6 +47,22 @@ ul li {
     transition: .3s ease-in;
 }
 
-.link_item:hover {
+.link_item:hover , .social-icons a:hover {
   color: #09e9b8;
 }
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.5em;
+    text-decoration: none;
+    margin-right: 0.8rem;
+    transition: .3s ease-in;
+   }
+
+   @media screen and (max-width: 991px){
+     .col-md-6,.col-md-8,.col-md-4{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     } 
+   }
