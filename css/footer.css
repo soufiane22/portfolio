@@ -13,14 +13,14 @@
 body{
     background-color: rgb(38 133 248 / 70%);;
     color: white;
-    padding-top: 2rem;
+    padding: 2rem 0;
     /* overflow: hidden; */
  
 }
 
 .logo{
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
 }
 
 ul{
