@@ -13,7 +13,8 @@
 body{
     background-color: rgb(38 133 248 / 70%);;
     color: white;
-    overflow: hidden;
+    padding-top: 2rem;
+    /* overflow: hidden; */
  
 }
 
@@ -33,7 +34,13 @@ ul li {
 }
 
 .link_item{
-    color: white;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 1.2rem;
+    color: #fff;
+    line-height: 2rem;
+    transition: .3s ease-in;
+}
+
+.link_item:hover {
+  color: #09e9b8;
 }

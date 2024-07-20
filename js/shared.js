@@ -14,7 +14,7 @@ document.write('<script   src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-
 
 document.write('<script   src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js" ></' + 'script>');
 
-document.write('  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>')
+document.write('<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>')
 
 
 $(document).ready(function() {
@@ -29,5 +29,12 @@ $(document).ready(function() {
                     console.log("Element not found");
                 }
      });
+
+     function resizeIframe() {
+        var iframe = document.getElementById('footer_content');
+        iframe.style.height = iframe.contentWindow.document.documentElement.scrollHeight + 'px';
+    }
+
+    document.getElementById('footer_content').onload = resizeIframe;
 });
 

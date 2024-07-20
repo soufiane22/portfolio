@@ -9,7 +9,6 @@
  }
 
  body{
-  height: 100%;
   border: 2px solid yellow;
  }
 
@@ -366,14 +365,14 @@ ul{
   z-index: 100;
 }
 
-footer{
+/* footer{
   min-height: max-content;
   width: 100%;
-}
+} */
  .footer_content{ 
-  height: 100%;
+  /* height: 100%; */
   box-sizing: border-box;
-  min-height: 25vh;
+  /* min-height: 25vh; */
 }
 
 @media screen and (max-width: 991px) {
@@ -416,5 +415,8 @@ footer{
 
   .contact {
     padding: 1rem;
+  }
+  .footer_content{
+    /* min-height: 50vh; */
   }
 }
