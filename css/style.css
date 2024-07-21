@@ -420,4 +420,8 @@ ul{
   .footer_content{
     /* min-height: 50vh; */
   }
+
+.project-content {
+  padding: 80px 20px;
+}
 }
