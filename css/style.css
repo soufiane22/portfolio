@@ -46,6 +46,7 @@
   padding: 100px 200px;
   margin-top: 0px !important;
   justify-content: start;
+  color: white;
  }
 
  .project-content {
@@ -55,14 +56,17 @@
   padding: 80px 50px;
  }
 
- .main h2 {
+ .hello{
   color: #fff;
   font-size: 1.4em;
   font-weight: 500;
+  font-weight: 700;
+  margin-bottom: 8px;
  }
- .main h2 span {
-  color: #2685f8;
-  font-size: 3em ;
+ .software_engineer {
+  color: #2685f8 !important;
+  font-size: 3em !important;
+  font-weight: 500;
  }
 
  .main h3 {
