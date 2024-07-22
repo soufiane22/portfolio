@@ -18,17 +18,7 @@ document.write('<script src="https://code.jquery.com/jquery-3.7.1.min.js" integr
 
 
 $(document).ready(function () {
-    // Wait the full loading of the iframe
-    $('iframe.nav-bar').on('load', function () {
-        var iframeContent = $(this).contents();
-        var triggerBtn = iframeContent.find('.navTrigger');
 
-        window.addEventListener('message', function (event) {
-            if (event.data && event.data.type === 'NAV_CLICK') {
-                triggerBtn.removeClass('active');
-            }
-        });
-    });
 
     // Handel the sidebar toggled  
     $('.navTrigger').click(function () {
@@ -65,6 +55,48 @@ $(document).ready(function () {
             window.parent.postMessage({ type: 'NAV_CLICK' }, '*');
             $navBar.removeClass('vertical-nav-bar-active');
         }
+    });
+
+    // Make navigation items active in scroll
+    $(window).scroll(function (event) {
+        var scrollPos = $(document).scrollTop() + 20;
+        // if (scrollPos === 0) {
+        //     $('a[href^="#site-main"]').addClass('active_item');
+        //     return;
+        // }
+        window.parent.postMessage({ type: 'SCROLL', scrollPos: scrollPos }, '*');
+
+    });
+
+
+
+    // Wait the full loading of the iframe
+    $('iframe.nav-bar').on('load', function () {
+        var iframeContent = $(this).contents();
+        var triggerBtn = iframeContent.find('.navTrigger');
+        var navLinks = iframeContent.find('.nav-link');
+        window.addEventListener('message', function (event) {
+            if (event.data && event.data.type === 'NAV_CLICK') {
+                triggerBtn.removeClass('active');
+            }
+
+            // Make the nav-link active on scrolling 
+            if (event.data && event.data.type === 'SCROLL') {
+                scrollPos = event.data.scrollPos;
+                navLinks.each(function () {
+                    var currLink = $(this);
+                    var targetSelector = new URL(currLink.attr("href"), window.location.href).hash;
+                    var refElement = $(targetSelector); // Select from parent document
+                    if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+                        $('.nav-link').removeClass("active_item");
+                        currLink.addClass("active_item");
+                    } else {
+                        currLink.removeClass("active_item");
+                    }
+                });
+            }
+         
+        });
     });
 
 });
