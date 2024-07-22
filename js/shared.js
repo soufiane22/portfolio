@@ -1,7 +1,7 @@
 // shared.js
 
 // jQuery
-document.write('<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></' + 'script>');
+document.write('<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></' + 'script>');
 
 // Popper.js
 document.write('<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"  integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></' + 'script>');
@@ -18,23 +18,76 @@ document.write('<script src="https://code.jquery.com/jquery-3.7.1.min.js" integr
 
 
 $(document).ready(function() {
+
+    // Handel the sidebar toggled  
     $('.navTrigger').click(function () {
         $(this).toggleClass('active');
          console.log("Clicked menu");
          const $navBar =  $('iframe#vertical-nav-bar', parent.document);
                 if ($navBar.length) {
-                    console.log("Element selected: ", $navBar);
                     $navBar.toggleClass('vertical-nav-bar-active');
                 } else {
                     console.log("Element not found");
                 }
      });
 
+     // Adjust the iframe footer size
      function resizeIframe() {
         var iframe = document.getElementById('footer_content');
         iframe.style.height = iframe.contentWindow.document.documentElement.scrollHeight + 'px';
     }
-    if(document.getElementById('footer_content'))
-    document.getElementById('footer_content').onload = resizeIframe;
+    if(document.getElementById('footer_content')){
+        document.getElementById('footer_content').onload = resizeIframe;
+    }
+
+
+    // Handel the active navigation item
+    var navigation_links = $(".main_list li a");
+
+    
+    navigation_links.click(function () {
+        console.log("nav-link ",navigation_links);
+        $('ul li a').removeClass('active_item');
+     
+        $(this).addClass('active_item');
+
+        // close the sidebar 
+        // $('.navTrigger').toggleClass('active');
+        const $navBar =  $('iframe#vertical-nav-bar', parent.document);
+        if ($navBar.length) {
+            window.parent.postMessage({ type: 'NAV_CLICK'}, '*');
+            $navBar.toggleClass('vertical-nav-bar-active');
+        }
+    });
+
+    window.addEventListener('message', function(event) {
+        if (event.data && event.data.type === 'NAV_CLICK') {
+            console.log('classList ', $('#navTrigger').classList);
+            document.getElementById('navTrigger').classList.remove('active');
+        }
+    });
+    
+
+    // document.addEventListener('DOMContentLoaded', function() {
+    //     const navLinks = document.querySelectorAll('.nav-link');
+
+  
+      
+    //     navLinks.forEach(link => {
+    //       link.addEventListener('click', function(event) {
+    //         // Prevent the default action if necessary
+    //         event.preventDefault();
+      
+    //         // Remove 'active' class from all nav links
+    //         navLinks.forEach(nav => nav.classList.remove('active'));
+      
+    //         // Add 'active' class to the clicked nav link
+    //         this.classList.add('active');
+      
+    //         // Optionally, you can add the default action back
+    //         window.location.href = this.href;
+    //       });
+    //     });
+    //   });
 });
 
