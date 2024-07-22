@@ -17,77 +17,55 @@ document.write('<script   src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-
 document.write('<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>')
 
 
-$(document).ready(function() {
+$(document).ready(function () {
+    // Wait the full loading of the iframe
+    $('iframe.nav-bar').on('load', function () {
+        var iframeContent = $(this).contents();
+        var triggerBtn = iframeContent.find('.navTrigger');
+
+        window.addEventListener('message', function (event) {
+            if (event.data && event.data.type === 'NAV_CLICK') {
+                triggerBtn.removeClass('active');
+            }
+        });
+    });
 
     // Handel the sidebar toggled  
     $('.navTrigger').click(function () {
         $(this).toggleClass('active');
-         console.log("Clicked menu");
-         const $navBar =  $('iframe#vertical-nav-bar', parent.document);
-                if ($navBar.length) {
-                    $navBar.toggleClass('vertical-nav-bar-active');
-                } else {
-                    console.log("Element not found");
-                }
-     });
+        const $navBar = $('iframe#vertical-nav-bar', parent.document);
+        if ($navBar.length) {
+            $navBar.toggleClass('vertical-nav-bar-active');
+        } else {
+            console.log("Element not found");
+        }
+    });
 
-     // Adjust the iframe footer size
-     function resizeIframe() {
+
+    // Adjust the iframe footer size
+    function resizeIframe() {
         var iframe = document.getElementById('footer_content');
         iframe.style.height = iframe.contentWindow.document.documentElement.scrollHeight + 'px';
     }
-    if(document.getElementById('footer_content')){
+    if (document.getElementById('footer_content')) {
         document.getElementById('footer_content').onload = resizeIframe;
     }
 
 
     // Handel the active navigation item
     var navigation_links = $(".main_list li a");
-
-    
     navigation_links.click(function () {
-        console.log("nav-link ",navigation_links);
         $('ul li a').removeClass('active_item');
-     
         $(this).addClass('active_item');
 
         // close the sidebar 
-        // $('.navTrigger').toggleClass('active');
-        const $navBar =  $('iframe#vertical-nav-bar', parent.document);
+        const $navBar = $('iframe#vertical-nav-bar', parent.document);
         if ($navBar.length) {
-            window.parent.postMessage({ type: 'NAV_CLICK'}, '*');
-            $navBar.toggleClass('vertical-nav-bar-active');
+            // send message to the main navbar for removing the active class from the trigger btn.
+            window.parent.postMessage({ type: 'NAV_CLICK' }, '*');
+            $navBar.removeClass('vertical-nav-bar-active');
         }
     });
 
-    window.addEventListener('message', function(event) {
-        if (event.data && event.data.type === 'NAV_CLICK') {
-            console.log('classList ', $('#navTrigger').classList);
-            document.getElementById('navTrigger').classList.remove('active');
-        }
-    });
-    
-
-    // document.addEventListener('DOMContentLoaded', function() {
-    //     const navLinks = document.querySelectorAll('.nav-link');
-
-  
-      
-    //     navLinks.forEach(link => {
-    //       link.addEventListener('click', function(event) {
-    //         // Prevent the default action if necessary
-    //         event.preventDefault();
-      
-    //         // Remove 'active' class from all nav links
-    //         navLinks.forEach(nav => nav.classList.remove('active'));
-      
-    //         // Add 'active' class to the clicked nav link
-    //         this.classList.add('active');
-      
-    //         // Optionally, you can add the default action back
-    //         window.location.href = this.href;
-    //       });
-    //     });
-    //   });
 });
 
