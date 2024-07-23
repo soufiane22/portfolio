@@ -16,9 +16,9 @@ document.write('<script   src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-
 
 document.write('<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>')
 
-
+document.write(` <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>`)
 $(document).ready(function () {
-
+    AOS.init();
 
     // Handel the sidebar toggled  
     $('.navTrigger').click(function () {
