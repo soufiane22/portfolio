@@ -60,10 +60,6 @@ $(document).ready(function () {
     // Make navigation items active in scroll
     $(window).scroll(function (event) {
         var scrollPos = $(document).scrollTop() + 350;
-        // if (scrollPos === 0) {
-        //     $('a[href^="#site-main"]').addClass('active_item');
-        //     return;
-        // }
         window.parent.postMessage({ type: 'SCROLL', scrollPos: scrollPos }, '*');
 
     });
@@ -90,36 +86,25 @@ $(document).ready(function () {
                     if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
                         $('.nav-link').removeClass("active_item");
                         currLink.addClass("active_item");
-                        console.log('targetSelector ',targetSelector);
-                        if(targetSelector == "#skills"){
+                        console.log('targetSelector ', targetSelector);
+                        if (targetSelector == "#skills") {
                             var progressBars = document.querySelectorAll('.progress-bar');
-                            progressBars.forEach(function(progressBar) {
+                            progressBars.forEach(function (progressBar) {
                                 var progressValue = progressBar.getAttribute('aria-valuenow');
-                          
-                                setTimeout(function() {
-                                  progressBar.style.width = progressValue + '%';
+
+                                setTimeout(function () {
+                                    progressBar.style.width = progressValue + '%';
                                 }, 100); // Delay to ensure transition is visible
-                              });
+                            });
                         }
                     } else {
                         currLink.removeClass("active_item");
                     }
                 });
             }
-         
+
         });
     });
-
-
-
 });
 
-// document.addEventListener("DOMContentLoaded", function() {
-//     var progressBar = document.querySelector('.progress-bar');
-//     var progressValue = progressBar.getAttribute('aria-valuenow');
-//     console.log({progressBar ,progressValue });
-//     setTimeout(function() {
-//       progressBar.style.width = progressValue + '%';
-//     }, 100); // Delay to ensure transition is visible
-//   });
 
