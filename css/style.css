@@ -164,10 +164,13 @@
 
  .social-icons a {
   color: #fff;
-  font-size: 1.7em;
+  font-size: 2.3em;
   /* padding-right: 30px; */
   text-decoration: none;
   margin-inline: 1.3rem;
+ }
+ .social-icons a:hover {
+  color: #01b18b;
  }
  
 
@@ -301,6 +304,14 @@ ul{
   width: 100%;
  }
 
+ /*   Skills Style */
+.progress-bar{
+  background-color: #09e9b8 !important;
+}
+.skill{
+  margin-bottom: 18px;
+}
+
  /* ------------------- Contact Me Style ------------- */
 
  .contact {
@@ -360,6 +371,7 @@ ul{
 .invalid-feedback  {
   min-height: 5rem;
 }
+ 
 
 /*  *********** Vertical sidebar style ************  */
 
@@ -377,10 +389,6 @@ ul{
   z-index: 100;
 }
 
-/* footer{
-  min-height: max-content;
-  width: 100%;
-} */
  .footer_content{ 
   /* height: 100%; */
   box-sizing: border-box;

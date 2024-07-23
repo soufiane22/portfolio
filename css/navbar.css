@@ -76,6 +76,18 @@ body {
 .nav-link:hover::before {
   width: 100%;
 }
+.active_item{
+  color:rgb(0, 136, 226) !important;
+}
+.active_item::before{
+  transition: 300ms ease;
+  height: 2px;
+  content: "";
+  position: absolute;
+  background-color: rgb(0, 136, 226) ;
+  width: 100%;
+  bottom: 1px;
+}
 
 .navbar-toggler-icon{
   color: #fff !important;
@@ -167,7 +179,7 @@ body {
 } */
 
 #verticalNavbarSupportedContent > .navbar-nav {
-  height: 50vh;
+  height: 35vh;
   justify-content: space-around;
   /* align-items: center; */
 }
