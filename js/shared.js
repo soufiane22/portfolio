@@ -16,9 +16,27 @@ document.write('<script   src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-
 
 document.write('<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>')
 
-document.write(` <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>`)
+document.write(`<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>`)
+
+document.write(`<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>`)
 $(document).ready(function () {
     AOS.init();
+
+    var typed = new Typed('#typed', {
+        strings: ['<i>Software Engineer.</i>'],
+        typeSpeed: 50,
+        backSpeed: 50,
+        loop: true,
+        showCursor: false
+      });
+
+      var name = new Typed('#name', {
+        strings: ['<i>SOUFIANE ALOUI EL IDRISSI.</i>'],
+        typeSpeed: 50,
+        backSpeed: 50,
+        loop: true,
+        showCursor: false
+      });
 
     // Handel the sidebar toggled  
     $('.navTrigger').click(function () {
@@ -59,7 +77,7 @@ $(document).ready(function () {
 
     // Make navigation items active in scroll
     $(window).scroll(function (event) {
-        var scrollPos = $(document).scrollTop() + 350;
+        var scrollPos = $(document).scrollTop() + 300;
         window.parent.postMessage({ type: 'SCROLL', scrollPos: scrollPos }, '*');
 
     });

@@ -13,8 +13,9 @@
   <link rel="stylesheet" href="./css/style.css" />
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   <script src="./js/shared.js"></script>
   <!-- <script src="./js/contact.js"></script> -->
   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -23,7 +24,8 @@
 
 </head>
 <header>
-  <iframe src="nav-bar.html" width="100%" height="75" class="nav-bar" frameborder="0" style="position: fixed; z-index: 100;  background: rgba(0, 0, 0,.03) !important;
+  <iframe src="nav-bar.html" width="100%" height="75" class="nav-bar" frameborder="0" 
+  style="position: fixed; z-index: 100;  background: rgba(0, 0, 0,.03) !important;
         backdrop-filter: blur(5.5px) !important; "></iframe>
 
   <iframe src="vertical-navbar.html" id="vertical-nav-bar" class="vertical-nav-bar" frameborder="0"></iframe>
@@ -35,8 +37,11 @@
     <div>
       <span class="hello" data-aos="fade-up" data-aos-duration="1000"> Hello, I'm Soufiane </span>
       <br />
-      <span class="software_engineer" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"
-        data-aos-once="true">Software Engineer</span>
+      <div style="min-height: 75px;">
+        <span class="software_engineer" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"
+        data-aos-once="true" id="typed">Software Engineer</span>
+      </div>
+   
 
       <h3 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Transforming ideas into innovative software
         solutions.</h3>
