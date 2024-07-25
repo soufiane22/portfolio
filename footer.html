@@ -2,6 +2,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/footer.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="./js/shared.js"></script>
 </head>
 <body>
@@ -47,11 +50,23 @@
     <div class="sub_footer d-flex justify-content-center align-items-center">
         <p>
             <span> 
-                Copyright ©2024 | Powered by 
+                Copyright ©2024 | Powered by &nbsp; 
             </span>
-            <span class="name" id="fullName">
-            </span> 
+            <div style="min-width: 200px;">
+                <span class="name" id="fullName">
+                </span> 
+            </div>
+        
         </p>
     </div>
     <script src="./js/shared.js"></script>
+    <script>
+              var fullName = new Typed('#fullName', {
+        strings: ['<i>SOUFIANE ALOUI EL IDRISSI.</i>'],
+        typeSpeed: 50,
+        backSpeed: 50,
+        loop: true,
+        showCursor: false
+      });
+    </script>
 </body>

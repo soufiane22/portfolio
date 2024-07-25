@@ -30,13 +30,7 @@ $(document).ready(function () {
         showCursor: false
       });
 
-      var fullName = new Typed('#fullName', {
-        strings: ['<i>SOUFIANE ALOUI EL IDRISSI.</i>'],
-        typeSpeed: 50,
-        backSpeed: 50,
-        loop: true,
-        showCursor: false
-      });
+
 
     // Handel the sidebar toggled  
     $('.navTrigger').click(function () {
