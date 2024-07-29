@@ -1,7 +1,7 @@
 // shared.js
 
 // jQuery
-document.write('<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></' + 'script>');
+document.write('<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>');
 
 // Popper.js
 document.write('<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"  integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></' + 'script>');
@@ -14,11 +14,13 @@ document.write('<script   src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-
 
 document.write('<script   src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js" ></' + 'script>');
 
-document.write('<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>')
+// document.write('<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>')
 
+document.write(`<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>`)
 
+document.write(`<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>`)
 $(document).ready(function () {
-
+    AOS.init();
 
     // Handel the sidebar toggled  
     $('.navTrigger').click(function () {
@@ -59,11 +61,7 @@ $(document).ready(function () {
 
     // Make navigation items active in scroll
     $(window).scroll(function (event) {
-        var scrollPos = $(document).scrollTop() + 20;
-        // if (scrollPos === 0) {
-        //     $('a[href^="#site-main"]').addClass('active_item');
-        //     return;
-        // }
+        var scrollPos = $(document).scrollTop() + 300;
         window.parent.postMessage({ type: 'SCROLL', scrollPos: scrollPos }, '*');
 
     });
@@ -90,14 +88,25 @@ $(document).ready(function () {
                     if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
                         $('.nav-link').removeClass("active_item");
                         currLink.addClass("active_item");
+                        console.log('targetSelector ', targetSelector);
+                        if (targetSelector == "#skills") {
+                            var progressBars = document.querySelectorAll('.progress-bar');
+                            progressBars.forEach(function (progressBar) {
+                                var progressValue = progressBar.getAttribute('aria-valuenow');
+
+                                setTimeout(function () {
+                                    progressBar.style.width = progressValue + '%';
+                                }, 100); // Delay to ensure transition is visible
+                            });
+                        }
                     } else {
                         currLink.removeClass("active_item");
                     }
                 });
             }
-         
+
         });
     });
-
 });
+
 
