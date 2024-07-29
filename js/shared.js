@@ -22,16 +22,6 @@ document.write(`<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"
 $(document).ready(function () {
     AOS.init();
 
-    var typed = new Typed('#typed', {
-        strings: ['<i>Software Engineer.</i>'],
-        typeSpeed: 50,
-        backSpeed: 50,
-        loop: true,
-        showCursor: false
-      });
-
-
-
     // Handel the sidebar toggled  
     $('.navTrigger').click(function () {
         $(this).toggleClass('active');
