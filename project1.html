@@ -14,10 +14,10 @@
 
 <body>
   <header>
-    <iframe src="nav-bar.html" width="100%" height="75" class="nav-bar d-block" frameborder="0"
+    <iframe src="nav-bar.html" width="100%" height="75" class="sidebar nav-bar d-block" frameborder="0"
       style="position: fixed; z-index: 100"></iframe>
     </iframe>
-    <iframe src="vertical-navbar.html" id="vertical-nav-bar" class="vertical-nav-bar" frameborder="0"></iframe>
+    <iframe src="vertical-navbar.html" id="vertical-nav-bar" class="sidebar vertical-nav-bar" frameborder="0"></iframe>
 
   </header>
 
@@ -113,6 +113,9 @@
       class="footer_content w-100"></iframe>
   </footer>
   <script src="./js/shared.js"></script>
+  <script>
+      window.parent.postMessage({ type: 'PROJECT_PAGE' }, '*');
+  </script>
 </body>
 
 </html>
