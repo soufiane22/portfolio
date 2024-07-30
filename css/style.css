@@ -351,6 +351,7 @@ ul{
  .form-control {
   border: 2px solid #fff !important;
  }
+ 
  .form-control::placeholder {
    color: #a9a9a9 !important;
  }
@@ -389,7 +390,6 @@ ul{
   position:  fixed;
   right: -100%;
   transition: .5s ease;
-
 }
 .vertical-nav-bar-active{
   right: 0% !important;
@@ -419,8 +419,9 @@ ul{
     width: 95%;
    }
    .card {
-    width: 95%;
+    width: 100%;
     height: auto;
+    margin: 15px auto !important;
    }
   
   .main{
