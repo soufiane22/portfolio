@@ -42,7 +42,10 @@ body {
   font-weight: bold;
   color: rgb(0, 136, 226);
 }
-
+.logo > img {
+  width: 55px;
+  height: 50px;
+}
 .nav-item{
   margin: 0px 20px;
 }
@@ -174,12 +177,9 @@ body {
    /* width: 15%; */
 }
 
-/* #verticalNavbarSupportedContent > div.ul {
-  display: ;
-} */
 
 #verticalNavbarSupportedContent > .navbar-nav {
-  height: 35vh;
+  height: 45vh;
   justify-content: space-around;
   /* align-items: center; */
 }
@@ -348,8 +348,16 @@ font-size: 20px;
 body{
   background-color: rgba(0, 0, 0, 0.7) !important;
 }
+
+.logo > img {
+  width: 45px;
+  height: 40px;
+}
+
   .navTrigger {
     display: block;
+    width: 25px !important;
+    height: 15px !important;
 }
 .nav div.main_list {
   width: 15%;

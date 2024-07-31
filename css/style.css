@@ -58,10 +58,7 @@
 
  .hello{
   color: #fff;
-  font-size: 1.4em;
   font-weight: 500;
-  font-weight: 700;
-  margin-bottom: 8px;
  }
  .software_engineer {
   color: #2685f8 !important;
@@ -74,8 +71,10 @@
   font-size: 2em;
   font-weight: 700;
   letter-spacing: 1px;
-  margin-top: 10px;
-  margin-bottom: 30px;
+ }
+
+ .software{
+  min-height: 75px;
  }
 
 
@@ -170,7 +169,8 @@
   margin-inline: 1.3rem;
  }
  .social-icons a:hover {
-  color: #01b18b;
+  color: #2685f8;
+  /* #01b18b; */
  }
  
 
@@ -384,8 +384,8 @@ ul{
 /*  *********** Vertical sidebar style ************  */
 
 .vertical-nav-bar{
-  margin-top: 75px;
-  width: 25%;
+  margin-top: 65px;
+  width: 35%;
   height: 100vh;
   position:  fixed;
   right: -100%;
@@ -423,15 +423,37 @@ ul{
     height: auto;
     margin: 15px auto !important;
    }
+
+   .nav-bar{
+    height: 65px !important;
+   }
+   /* .vertical-nav-bar{
+    margin-top: 65px !important;
+    width: 35%  !important;
+   } */
   
   .main{
     padding: 20px 15px;
     text-align: center;
   }
 
+  .software{
+    min-height: 45px !important;
+   }
+
+  #typed{
+    font-size: 2rem !important;
+  }
+  .main-btn{
+    margin: 20px 0px !important;
+    font-size: 14px !important;
+  }
+ 
+
   .social-icons{
     display: flex;
     justify-content: center !important;
+    margin-top: 20px;
   }
 
   .aboutme-card {
@@ -453,7 +475,9 @@ ul{
 .project-content {
   padding: 80px 20px;
 }
-
+.info{
+  text-wrap: wrap !important;
+}
 .github-btn{
   display: flex;
   align-items: center;
