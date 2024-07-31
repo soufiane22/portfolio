@@ -69,32 +69,10 @@ $(document).ready(function () {
 
 
     // Wait the full loading of the iframe
-    $('iframe.sidebar').on('load', function () {
+    $('iframe.nav-bar').on('load', function () {
         var iframeContent = $(this).contents();
         var triggerBtn = iframeContent.find('.navTrigger');
-        var projectLink = iframeContent.find('#projects');
-        var homeLink = iframeContent.find('#home');
         var navLinks = iframeContent.find('.nav-link');
-
-        // Make the project item in navbar active in the projects pages.
-        const fullURL = document.URL;
-        // Extract the filename from the URL
-        const fileName = fullURL.substring(fullURL.lastIndexOf('/') + 1);
-        console.log("fileName 88888 ",fileName);
-        const navLinksArray = Array.from(navLinks);
-        console.log('navLinksArray ',navLinksArray);
-        navLinksArray.forEach(link => {
-            link.classList.remove('active_item');
-        });
-        if (['project1.html', 'project2.html', 'project3.html'].includes(fileName)) {
-
-            projectLink.addClass('active_item');
-        } else {
-            console.log({homeLink,projectLink});
-            homeLink.addClass('active_item');
-        }
-
-
         window.addEventListener('message', function (event) {
             if (event.data && event.data.type === 'NAV_CLICK') {
                 triggerBtn.removeClass('active');
@@ -110,6 +88,7 @@ $(document).ready(function () {
                     if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
                         $('.nav-link').removeClass("active_item");
                         currLink.addClass("active_item");
+                        console.log('targetSelector ', targetSelector);
                         if (targetSelector == "#skills") {
                             var progressBars = document.querySelectorAll('.progress-bar');
                             progressBars.forEach(function (progressBar) {

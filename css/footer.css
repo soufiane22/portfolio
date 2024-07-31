@@ -111,6 +111,8 @@ h2 {
 
     .typed{
         min-height: 25px;
+        min-width: 50px !important;
+        max-width: 200px;
     }
 
     .sub_footer p {
