@@ -63,6 +63,10 @@ $(document).ready(function () {
     $(window).scroll(function (event) {
         var scrollPos = $(document).scrollTop() + 300;
         window.parent.postMessage({ type: 'SCROLL', scrollPos: scrollPos }, '*');
+        if($(document).scrollTop()  > 0){
+           $('.scroll-to-top').addClass('visible'); 
+        }
+       
 
     });
 
