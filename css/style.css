@@ -275,6 +275,10 @@ ul{
   color: #2685f8;
 }
 
+.btns{
+  display: flex;
+}
+
 /* ------------------- Project 2 style -------------- */
 .carousel-imgs{
   min-height: 80vh;
@@ -470,6 +474,16 @@ ul{
   }
   .footer_content{
     /* min-height: 50vh; */
+  }
+
+  .btns{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px !important;
+  }
+  .github-btn,.next-btn {
+    margin: 10px auto !important;
   }
 
 .project-content {
