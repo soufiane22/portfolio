@@ -52,6 +52,7 @@ h2 {
 .link_item:hover,
 .social-icons a:hover {
     color: #09e9b8;
+    /* color: #2685f8; */
 }
 
 .social-icons a {

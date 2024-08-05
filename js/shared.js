@@ -61,10 +61,19 @@ $(document).ready(function () {
 
     // Make navigation items active in scroll
     $(window).scroll(function (event) {
+        handelProgressBar();
         var scrollPos = $(document).scrollTop() + 300;
         window.parent.postMessage({ type: 'SCROLL', scrollPos: scrollPos }, '*');
 
+        // Show/Hide the scroll to top button
+        if ($(document).scrollTop() > 10) {
+            $('.scroll-to-top').addClass('scroll-to-top-visible');
+        } else {
+            $('.scroll-to-top').removeClass('scroll-to-top-visible');
+        }
     });
+
+
 
 
 
@@ -80,9 +89,9 @@ $(document).ready(function () {
         const fullURL = document.URL;
         // Extract the filename from the URL
         const fileName = fullURL.substring(fullURL.lastIndexOf('/') + 1);
-        console.log("fileName 88888 ",fileName);
+        console.log("fileName 88888 ", fileName);
         const navLinksArray = Array.from(navLinks);
-        console.log('navLinksArray ',navLinksArray);
+        console.log('navLinksArray ', navLinksArray);
         navLinksArray.forEach(link => {
             link.classList.remove('active_item');
         });
@@ -90,7 +99,7 @@ $(document).ready(function () {
 
             projectLink.addClass('active_item');
         } else {
-            console.log({homeLink,projectLink});
+            console.log({ homeLink, projectLink });
             homeLink.addClass('active_item');
         }
 
@@ -129,5 +138,21 @@ $(document).ready(function () {
         });
     });
 });
+
+// Scroll to top function
+function scrollToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+// Scroll Indicator function
+function handelProgressBar() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById('myBar').style.width = scrolled + "%";
+    console.log('bar scroll: ' , document.getElementById('myBar') );
+    
+  }
 
 
