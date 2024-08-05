@@ -61,6 +61,7 @@ $(document).ready(function () {
 
     // Make navigation items active in scroll
     $(window).scroll(function (event) {
+        handelProgressBar();
         var scrollPos = $(document).scrollTop() + 300;
         window.parent.postMessage({ type: 'SCROLL', scrollPos: scrollPos }, '*');
 
@@ -143,5 +144,15 @@ function scrollToTop() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+
+// Scroll Indicator function
+function handelProgressBar() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById('myBar').style.width = scrolled + "%";
+    console.log('bar scroll: ' , document.getElementById('myBar') );
+    
+  }
 
 
