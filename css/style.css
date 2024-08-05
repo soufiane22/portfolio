@@ -409,20 +409,26 @@ ul{
 
 /*  Got to top btn  */
 .scroll-to-top {
-  background: var(--main-color);
   border-radius: 50%;
   bottom: 30px;
   color: #fff;
   cursor: pointer;
-  font-size: 3rem;
-  height: 6rem;
+  font-size: 1.5rem;
+  height: 3rem;
+  width: 3rem;
   position: fixed;
-  /* right: -300px; */
+  right: -300px;
   transition: .5s ease;
-  width: 6rem;
+  background-color: #2685f8  ;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
-button > .visible {
+.scroll-to-top-visible {
+  position: fixed;
   right: 20px !important;
 }
 

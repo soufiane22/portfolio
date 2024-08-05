@@ -63,12 +63,16 @@ $(document).ready(function () {
     $(window).scroll(function (event) {
         var scrollPos = $(document).scrollTop() + 300;
         window.parent.postMessage({ type: 'SCROLL', scrollPos: scrollPos }, '*');
-        if($(document).scrollTop()  > 0){
-           $('.scroll-to-top').addClass('visible'); 
-        }
-       
 
+        // Show/Hide the scroll to top button
+        if ($(document).scrollTop() > 10) {
+            $('.scroll-to-top').addClass('scroll-to-top-visible');
+        } else {
+            $('.scroll-to-top').removeClass('scroll-to-top-visible');
+        }
     });
+
+
 
 
 
@@ -84,9 +88,9 @@ $(document).ready(function () {
         const fullURL = document.URL;
         // Extract the filename from the URL
         const fileName = fullURL.substring(fullURL.lastIndexOf('/') + 1);
-        console.log("fileName 88888 ",fileName);
+        console.log("fileName 88888 ", fileName);
         const navLinksArray = Array.from(navLinks);
-        console.log('navLinksArray ',navLinksArray);
+        console.log('navLinksArray ', navLinksArray);
         navLinksArray.forEach(link => {
             link.classList.remove('active_item');
         });
@@ -94,7 +98,7 @@ $(document).ready(function () {
 
             projectLink.addClass('active_item');
         } else {
-            console.log({homeLink,projectLink});
+            console.log({ homeLink, projectLink });
             homeLink.addClass('active_item');
         }
 
@@ -133,5 +137,11 @@ $(document).ready(function () {
         });
     });
 });
+
+// Scroll to top function
+function scrollToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
 
 
