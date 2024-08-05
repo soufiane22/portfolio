@@ -1,24 +1,19 @@
 // shared.js
 
-// jQuery
-document.write('<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>');
-
 // Popper.js
 document.write('<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"  integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></' + 'script>');
 
 // Bootstrap
 document.write('<script   src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></' + 'script>');
 document.write('<script   src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"   integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></' + 'script>');
-
-document.write('<script   src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/css/bootstrapvalidator.min.css" ></' + 'script>');
-
 document.write('<script   src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js" ></' + 'script>');
 
-// document.write('<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>')
-
+// Animation On Scroll library
 document.write(`<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>`)
 
+// Auto typed library
 document.write(`<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>`)
+
 $(document).ready(function () {
     AOS.init();
 
@@ -89,9 +84,7 @@ $(document).ready(function () {
         const fullURL = document.URL;
         // Extract the filename from the URL
         const fileName = fullURL.substring(fullURL.lastIndexOf('/') + 1);
-        console.log("fileName 88888 ", fileName);
         const navLinksArray = Array.from(navLinks);
-        console.log('navLinksArray ', navLinksArray);
         navLinksArray.forEach(link => {
             link.classList.remove('active_item');
         });
@@ -99,7 +92,6 @@ $(document).ready(function () {
 
             projectLink.addClass('active_item');
         } else {
-            console.log({ homeLink, projectLink });
             homeLink.addClass('active_item');
         }
 
@@ -151,8 +143,6 @@ function handelProgressBar() {
     var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     var scrolled = (winScroll / height) * 100;
     document.getElementById('myBar').style.width = scrolled + "%";
-    console.log('bar scroll: ' , document.getElementById('myBar') );
-    
   }
 
 
