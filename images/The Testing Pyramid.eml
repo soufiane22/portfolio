@@ -1,0 +1,1959 @@
+Delivered-To: soufiane.alouielidrissi@etu.uae.ac.ma
+Received: by 2002:a17:907:a0b:b0:a7d:c755:1c60 with SMTP id bb11csp1514918ejc;
+        Mon, 5 Aug 2024 09:04:15 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IGhNNcd0heiS4cMYOXlBRPYdRbmxBV5vebTvXQRoNYGoZIoemg+cG5iLdgdda36yQLqeHqb
+X-Received: by 2002:a05:6808:1451:b0:3da:a032:24a6 with SMTP id 5614622812f47-3db55809d25mr15301333b6e.19.1722873855212;
+        Mon, 05 Aug 2024 09:04:15 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1722873855; cv=none;
+        d=google.com; s=arc-20160816;
+        b=R0ct9r2BR57iNkk13UrV3KB9E+PMWJfEcdkJicD2LLqtwZ1LwWlJybto19hbsb8M5v
+         mZLZJLCyosQrXUd1eIQb2Oajg0fSSOvwWuAGC6JnT4KGPmQzIlx85gQJrdoh4if4abvx
+         5cfqGoSqE7cSoabWJZCrR27s+Sa8ZkyJKY33W93cvF9Cf70XUL5uykveIsFmYZ0yW6Go
+         5bg1pCTtt4vnPHLIUSZfogRdktUsdcwAW1rRB8rb9DZ0A9W25PIpXF5ks9k8ZQK9Pnc+
+         OjcSXjnNA/0PDX+Q8Tyg+ki0wpF/Y04TO6cE9wexIz0HxExFU1j3Qj0Vz1+xGKluwlui
+         NCBw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-post:list-id:list-unsubscribe-post:list-unsubscribe
+         :list-archive:list-url:list-owner:reply-to:in-reply-to:references
+         :sender:feedback-id:date:message-id:to:from:subject:mime-version
+         :dkim-signature;
+        bh=pE6P/dVu90ghyYzn2NfrYQ+3GbQJria3NUZ/Ehbluqw=;
+        fh=yWBNY+uyZ37XDLstSpI9FiTT78yjrsrTBleFy4gNeCE=;
+        b=LL4otNdHN00N3i2/NYrUxSLm1yKhWhHPNB3avsbJG+wGSw30E7Bt3VysrTHk4IFnii
+         adNMlhKcebF7CE4zphZwFZAhlR2aNxsntAcuzstIv+2WDHJTP5+CbTN/v1ZPkFjBppOS
+         oTfOnxiwg9Em+BRzAt9wq4tV0n14Jey9QaIqQWsBU/E/ZYcV3qL9E4hnRN5JFFj9xQjp
+         aTO45kf5bVk1U7m/o18YabznomJzi3qHwMRabiYtOG5WvzX/EEzfqW3OIZDUHjH+sOdt
+         Wrc7zXKq2j7dauS3FK65lk0nF1gAMJY3Xm8Ew0tAtRuvwSc7Ce9PQalvrx4DZEROHYRL
+         1+7A==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mg-d0.substack.com header.s=mailo header.b=CaqSMghy;
+       spf=pass (google.com: domain of bounce+7fa7eb.63af5d-soufiane.alouielidrissi=etu.uae.ac.ma@mg-d0.substack.com designates 159.112.244.9 as permitted sender) smtp.mailfrom="bounce+7fa7eb.63af5d-soufiane.alouielidrissi=etu.uae.ac.ma@mg-d0.substack.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=substack.com
+Return-Path: <bounce+7fa7eb.63af5d-soufiane.alouielidrissi=etu.uae.ac.ma@mg-d0.substack.com>
+Received: from m244-9.mailgun.net (m244-9.mailgun.net. [159.112.244.9])
+        by mx.google.com with UTF8SMTPS id a1e0cc1a2514c-83c09d257a1si1357679241.167.2024.08.05.09.04.14
+        for <soufiane.alouielidrissi@etu.uae.ac.ma>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Mon, 05 Aug 2024 09:04:15 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce+7fa7eb.63af5d-soufiane.alouielidrissi=etu.uae.ac.ma@mg-d0.substack.com designates 159.112.244.9 as permitted sender) client-ip=159.112.244.9;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mg-d0.substack.com header.s=mailo header.b=CaqSMghy;
+       spf=pass (google.com: domain of bounce+7fa7eb.63af5d-soufiane.alouielidrissi=etu.uae.ac.ma@mg-d0.substack.com designates 159.112.244.9 as permitted sender) smtp.mailfrom="bounce+7fa7eb.63af5d-soufiane.alouielidrissi=etu.uae.ac.ma@mg-d0.substack.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=substack.com
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg-d0.substack.com; q=dns/txt; s=mailo; t=1722873854; x=1722881054;
+ h=List-Post: List-Id: List-Unsubscribe-Post: List-Unsubscribe: List-Archive: List-Owner: Reply-To: In-Reply-To: References: sender: sender: Date: Message-Id: To: To: From: From: Subject: Subject: Content-Type: Mime-Version;
+ bh=pE6P/dVu90ghyYzn2NfrYQ+3GbQJria3NUZ/Ehbluqw=;
+ b=CaqSMghykLRE2m8BsqRgsz+KZrYAv3tG/lANXtdlqUZ5yaiNyo4e8QhuUfOu3rAgJrcAXcXMq3v5/jwA0YVlz3MX8NEwaH78HuRU4O2ReL6wHqHaAQf356M59fOgQEllhqcAODqKFXTS+2C3Henpixl6Lq3uTTVxOp1EvFlBtSY=
+X-Mailgun-Sending-Ip: 159.112.244.9
+X-Mailgun-Sid: WyIyYjY0YiIsInNvdWZpYW5lLmFsb3VpZWxpZHJpc3NpQGV0dS51YWUuYWMubWEiLCI2M2FmNWQiXQ==
+Received: from <unknown> (<unknown> []) by fa1c1417df98 with HTTP id
+ 66b0f7febf51ecc894a37ed8; Mon, 05 Aug 2024 16:04:12 GMT
+X-Mailgun-Batch-Id: 66b0f7fdbcbe339e67088100
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="236ff98aef600d22c98507f6fdcc11792bcbe9371641091054dce2b69c45"
+Subject: The Testing Pyramid
+From: "Nelson (Amigoscode)" <amigoscode@substack.com>
+To: soufiane.alouielidrissi@etu.uae.ac.ma
+X-Mailgun-Tag: post
+X-Mailgun-Track-Clicks: false
+Message-Id: <20240805160103.3.af01f76fb21ec9d4@mg-d0.substack.com>
+Date: Mon, 5 Aug 2024 16:01:03 +0000
+Feedback-ID: post-147365877:cat-post:pub-1355226:substack
+sender: "Nelson (Amigoscode)" <amigoscode@substack.com>
+References: <post-147365877@substack.com>
+In-Reply-To: <post-147365877@substack.com>
+Reply-To: "Nelson (Amigoscode)"
+ <reply+2fqk8l&3jbf90&&a8848ca19acec0098f2da843936392e84fe8c077b07c42608913f6c28f8661d7@mg1.substack.com>
+List-Owner: <mailto:amigoscode@substack.com>
+List-URL: <https://blog.amigoscode.com/>
+List-Archive: <https://blog.amigoscode.com/archive>
+List-Unsubscribe: <https://blog.amigoscode.com/action/disable_email/disable?token=eyJ1c2VyX2lkIjoyMTM4NDQyMTIsInBvc3RfaWQiOjE0NzM2NTg3NywiaWF0IjoxNzIyODczODUxLCJleHAiOjE3NTQ0MDk4NTEsImlzcyI6InB1Yi0xMzU1MjI2Iiwic3ViIjoiZGlzYWJsZV9lbWFpbCJ9.6pyUtU7h0ZdVfn9KT1KMk47xkHuM96-sW7hn481pGjY>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Id: <amigoscode.substack.com>
+List-Post: <https://blog.amigoscode.com/p/the-testing-pyramid>
+X-Mailgun-Variables: {"category": "post", "email_generated_at": "1722873852340", "is_freemail":
+ "true", "post_audience": "everyone", "post_id": "147365877", "post_type":
+ "newsletter", "pub_community_enabled": "true", "publication_id": "1355226",
+ "subdomain": "amigoscode", "user_id": "213844212"}
+
+--236ff98aef600d22c98507f6fdcc11792bcbe9371641091054dce2b69c45
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+View this post on the web at https://blog.amigoscode.com/p/the-testing-pyra=
+mid
+
+Ensuring the quality and reliability of Java applications is crucial for su=
+ccessful software development. The testing pyramid and various testing fram=
+eworks play a vital role in achieving this goal. This guide provides an ove=
+rview of the testing pyramid followed by a detailed explanation of five pop=
+ular Java testing frameworks.
+The Testing Pyramid
+The testing pyramid is a concept that guides the strategy for test automati=
+on in software development. It emphasizes the importance of a balanced appr=
+oach to testing, with a strong foundation of unit tests and a smaller numbe=
+r of higher-level tests.
+Thanks for reading Amigoscode Newsletter! Subscribe for free to receive new=
+ posts and support my work.
+Layers of the Testing Pyramid:
+Unit Tests: Form the base of the pyramid, focusing on individual components=
+ of the code. They are fast, reliable, and provide immediate feedback.
+Integration Tests: Ensure that different components of the application work=
+ together as expected. They are broader in scope than unit tests but still =
+relatively fast and reliable.
+End-to-End Tests: Test the entire application workflow from start to finish=
+, ensuring that the system as a whole meets the requirements. These tests a=
+re slower and more complex but crucial for catching issues that may not be =
+evident in isolated components.
+UI Tests: Represent the top layer of the pyramid, focusing on testing the u=
+ser interface. These tests are the most brittle and time-consuming, but the=
+y are essential for ensuring a positive user experience.
+5 Testing Frameworks / Libraries For Java Devs
+To effectively implement the testing pyramid, it's important to choose the =
+right testing frameworks. Here are five popular Java testing frameworks, ea=
+ch with its unique strengths and purposes.
+1. JUnit
+Purpose: Widely used for unit testing.
+Features: Simple, user-friendly, and integrates well with development tools=
+=2E
+Usage: Ideal for writing and running repeatable tests, ensuring that indivi=
+dual parts of the code (units) function correctly.
+2. TestNG
+Purpose: Supports various testing categories.
+Features: Flexible, scalable, and suitable for both simple and complex test=
+s.
+Usage: Offers advanced functionalities such as parallel testing, data-drive=
+n testing, and comprehensive reporting, making it a versatile choice for di=
+fferent testing needs.
+3. Selenium
+Purpose: Automation framework for web browsers.
+Features: Cross-platform support, integrates with TestNG/JUnit, and has str=
+ong community support.
+Usage: Essential for automating web application testing, ensuring that web =
+interfaces function as expected across different browsers and platforms.
+4. Cucumber
+Purpose: Behavior-driven development (BDD) tool.
+Features: Enhances communication with non-technical stakeholders.
+Usage: Uses plain language specifications to write tests, which helps bridg=
+e the gap between developers and business stakeholders by making test cases=
+ more understandable.
+5. Mockito
+Purpose: Mocking framework for unit tests.
+Features: Easy to use, reduces boilerplate code, and integrates with JUnit/=
+TestNG.
+Usage: Useful for creating mock objects in unit tests, allowing developers =
+to test parts of the code in isolation without relying on external dependen=
+cies.
+Question=20
+Bonus =F0=9F=8E=81=20
+Types of API Testing
+I=E2=80=99ll discuss this diagram in a future blog.
+Happy Coding =F0=9F=91=8B=F0=9F=8F=BF
+Thanks for reading Amigoscode Newsletter! Subscribe for free to receive new=
+ posts and support my work.
+
+Unsubscribe https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9ibG9nLmFtaWd=
+vc2NvZGUuY29tL2FjdGlvbi9kaXNhYmxlX2VtYWlsP3Rva2VuPWV5SjFjMlZ5WDJsa0lqb3lNVE=
+00TkRReU1USXNJbkJ2YzNSZmFXUWlPakUwTnpNMk5UZzNOeXdpYVdGMElqb3hOekl5T0Rjek9EV=
+XhMQ0psZUhBaU9qRTNOVFEwTURrNE5URXNJbWx6Y3lJNkluQjFZaTB4TXpVMU1qSTJJaXdpYzNW=
+aUlqb2laR2x6WVdKc1pWOWxiV0ZwYkNKOS42cHlVdFU3aDBaZFZmbjlLVDFLTWs0N3hrSHVNOTY=
+tc1c3aG40ODFwR2pZIiwicCI6MTQ3MzY1ODc3LCJzIjoxMzU1MjI2LCJmIjp0cnVlLCJ1IjoyMT=
+M4NDQyMTIsImlhdCI6MTcyMjg3Mzg1MSwiZXhwIjoxNzI1NDY1ODUxLCJpc3MiOiJwdWItMCIsI=
+nN1YiI6ImxpbmstcmVkaXJlY3QifQ.yl4cyVHh7_NgZ7MngZxBscoTpq4L0M8StjPFoVi45XM?
+--236ff98aef600d22c98507f6fdcc11792bcbe9371641091054dce2b69c45
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><meta charSet=3D"utf-8"><title>The Testing Pyramid</title><styl=
+e>
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .typography .markup table.image-wrapper img,
+  .typography.editor .markup table.image-wrapper img,
+  .typography .markup table.kindle-wrapper img,
+  .typography.editor .markup table.kindle-wrapper img {
+    max-width: 550px;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .typography .markup div.youtube-inner div.youtube-screen,
+  .typography.editor .markup div.youtube-inner div.youtube-screen,
+  .typography .markup div.vimeo-inner div.youtube-screen,
+  .typography.editor .markup div.vimeo-inner div.youtube-screen {
+    display: none !important;
+  }
+}
+
+
+@media screen and (max-width: 370px) {
+  .typography .markup div.tiktok-wrap,
+  .typography.editor .markup div.tiktok-wrap {
+    width: calc(95vw - 32px);
+    height: calc((95vw - 32px - 2px) / 0.485714);
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .typography .markup div.embedded-publication-wrap .embedded-publication.s=
+how-subscribe,
+  .typography.editor .markup div.embedded-publication-wrap .embedded-public=
+ation.show-subscribe {
+    padding: 24px;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .typography .markup div.subscription-widget-wrap .subscription-widget.sho=
+w-subscribe,
+  .typography.editor .markup div.subscription-widget-wrap .subscription-wid=
+get.show-subscribe,
+  .typography .markup div.subscription-widget-wrap-editor .subscription-wid=
+get.show-subscribe,
+  .typography.editor .markup div.subscription-widget-wrap-editor .subscript=
+ion-widget.show-subscribe,
+  .typography .markup div.captioned-button-wrap .subscription-widget.show-s=
+ubscribe,
+  .typography.editor .markup div.captioned-button-wrap .subscription-widget=
+=2Eshow-subscribe {
+    padding: 0px 24px;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .typography .markup div.subscription-widget-wrap .subscription-widget.sho=
+w-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.subscription-widget-wrap .subscription-wid=
+get.show-subscribe .subscription-widget-subscribe .button,
+  .typography .markup div.subscription-widget-wrap-editor .subscription-wid=
+get.show-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.subscription-widget-wrap-editor .subscript=
+ion-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography .markup div.captioned-button-wrap .subscription-widget.show-s=
+ubscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.captioned-button-wrap .subscription-widget=
+=2Eshow-subscribe .subscription-widget-subscribe .button {
+    padding: 10px 12px;
+    min-width: 110px;
+  }
+}
+
+
+@media (max-width: 650px) {
+  .typography .markup .tweet,
+  .typography.editor .markup .tweet {
+    padding: 12px;
+  }
+}
+
+
+@media (max-width: 650px) {
+  .typography .markup .tweet .tweet-text,
+  .typography.editor .markup .tweet .tweet-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+
+@media (max-width: 650px) {
+  .typography .markup .tweet .tweet-photos-container.two,
+  .typography.editor .markup .tweet .tweet-photos-container.two,
+  .typography .markup .tweet .tweet-photos-container.three,
+  .typography.editor .markup .tweet .tweet-photos-container.three,
+  .typography .markup .tweet .tweet-photos-container.four,
+  .typography.editor .markup .tweet .tweet-photos-container.four {
+    height: 200px;
+  }
+}
+
+
+@media (max-width: 650px) {
+  .typography .markup .tweet a.expanded-link .expanded-link-img,
+  .typography.editor .markup .tweet a.expanded-link .expanded-link-img {
+    max-height: 180px;
+  }
+}
+
+
+@media (max-width: 650px) {
+  .typography .markup .tweet a.expanded-link .expanded-link-description,
+  .typography.editor .markup .tweet a.expanded-link .expanded-link-descript=
+ion {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .typography .markup .apple-podcast-container,
+  .typography.editor .markup .apple-podcast-container {
+    width: unset;
+  }
+}
+
+
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed img.install-substack-app-=
+embed-img,
+  .typography.editor .markup .install-substack-app-embed img.install-substa=
+ck-app-embed-img {
+    margin: 0 auto 16px auto;
+  }
+}
+
+
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed .install-substack-app-emb=
+ed-text,
+  .typography.editor .markup .install-substack-app-embed .install-substack-=
+app-embed-text {
+    margin: 0 0 12px 0;
+    max-width: 100%;
+    width: auto;
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed .install-substack-app-emb=
+ed-link,
+  .typography.editor .markup .install-substack-app-embed .install-substack-=
+app-embed-link {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+@media screen and (min-width: 481px) {
+  .share-button-container {
+    height: 38px;
+  }
+}
+
+
+@media screen and (min-width: 481px) {
+  .share-button-container a.comment {
+    height: 38px;
+    line-height: 38px;
+    padding-right: 10px;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .share-button-container .separator {
+    display: block;
+    margin: 0;
+    height: 8px;
+    border-left: none;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .share-button-container a.share.first img {
+    padding-left: 0;
+  }
+}
+
+
+@media screen and (min-width: 481px) {
+  .share-button-container a.mobile {
+    display: none !important;
+  }
+}
+
+
+@media screen and (min-width: 541px) {
+  .settings-add-pub-modal-wrapper .container .add-recommending-pub-modal-co=
+ntainer {
+    padding: 36px;
+    height: 680px;
+  }
+}
+
+
+@media screen and (min-width: 541px) {
+  .settings-add-pub-modal-wrapper .container .add-recommending-pub-modal-co=
+ntainer .footer {
+    position: absolute;
+    bottom: 36px;
+    margin: 0px;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .header-anchor-parent {
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .post {
+    padding: 32px 0 0 0;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .post .post-header .post-label {
+    margin-top: 8px;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .post .post-header .meta-author-wrap.alternative-meta .meta-right-column =
+=2Epost-meta {
+    margin-top: 6px;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .post .footer-facepile-container {
+    height: 64px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .post .post-footer.use-separators {
+    justify-content: center;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .post .post-footer.next-prev {
+    height: 64px;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .post-contributor-footer .post-contributor-bio-table {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-table-row {
+    display: flex;
+    flex-direction: row;
+  }
+  .post-contributor-footer .post-contributor-bio-userhead-cell,
+  .post-contributor-footer .post-contributor-bio-body-cell {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-body-cell {
+    flex-grow: 1;
+  }
+  .post-contributor-footer .post-contributor-bio-body-table {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-body-table-row {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-copy-cell,
+  .post-contributor-footer .post-contributor-bio-controls-cell {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-copy-cell {
+    margin: 0 0 16px 0;
+  }
+  .post-contributor-footer .post-contributor-bio-controls-cell {
+    width: auto;
+  }
+  .post-contributor-footer .post-contributor-bio-controls {
+    margin: auto;
+  }
+  .post-contributor-footer .post-contributor-bio-controls .button.primary {
+    width: 100%;
+  }
+  .post-contributor-footer .post-contributor-bio-text {
+    font-size: 14px;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .post-silhouette {
+    padding: 32px 0;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-title {
+    margin-top: 10.44225025px;
+    height: 120px;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-meta {
+    width: 75%;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-meta.with-byline-image {
+    margin: 20px 0;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item,
+  .post-meta.alternative-meta .post-meta-item {
+    padding-right: 16px;
+  }
+}
+
+
+@media screen and (max-width: 370px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item,
+  .post-meta.alternative-meta .post-meta-item {
+    font-size: 14px;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item.guest-author-pu=
+blication,
+  .post-meta.alternative-meta .post-meta-item.guest-author-publication {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 370px) {
+  .post-meta .post-meta-item .post-meta-button {
+    height: 36px !important;
+  }
+  .post-meta .post-meta-item .post-meta-button .meta-button-label {
+    display: none;
+  }
+  .post-meta .post-meta-item .post-meta-button > svg {
+    margin-right: 0;
+  }
+}
+
+
+@media screen and (max-width: 370px) {
+  .post-meta .post-meta-item {
+    font-size: 12px;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .post .floating-subscribe-button {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  body .markup table.image-wrapper img,
+  body .markup table.kindle-wrapper img {
+    max-width: 550px;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  body .markup div.youtube-inner div.youtube-screen,
+  body .markup div.vimeo-inner div.youtube-screen {
+    display: none !important;
+  }
+}
+
+
+@media screen and (max-width: 370px) {
+  body .markup div.tiktok-wrap {
+    width: calc(95vw - 32px);
+    height: calc((95vw - 32px - 2px) / 0.485714);
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  body .markup div.embedded-publication-wrap .embedded-publication.show-sub=
+scribe {
+    padding: 24px;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  body .markup div.subscription-widget-wrap .subscription-widget.show-subsc=
+ribe,
+  body .markup div.subscription-widget-wrap-editor .subscription-widget.sho=
+w-subscribe,
+  body .markup div.captioned-button-wrap .subscription-widget.show-subscrib=
+e {
+    padding: 0px 24px;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  body .markup div.subscription-widget-wrap .subscription-widget.show-subsc=
+ribe .subscription-widget-subscribe .button,
+  body .markup div.subscription-widget-wrap-editor .subscription-widget.sho=
+w-subscribe .subscription-widget-subscribe .button,
+  body .markup div.captioned-button-wrap .subscription-widget.show-subscrib=
+e .subscription-widget-subscribe .button {
+    padding: 10px 12px;
+    min-width: 110px;
+  }
+}
+
+
+@media (max-width: 650px) {
+  body .markup .tweet {
+    padding: 12px;
+  }
+}
+
+
+@media (max-width: 650px) {
+  body .markup .tweet .tweet-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+
+@media (max-width: 650px) {
+  body .markup .tweet .tweet-photos-container.two,
+  body .markup .tweet .tweet-photos-container.three,
+  body .markup .tweet .tweet-photos-container.four {
+    height: 200px;
+  }
+}
+
+
+@media (max-width: 650px) {
+  body .markup .tweet a.expanded-link .expanded-link-img {
+    max-height: 180px;
+  }
+}
+
+
+@media (max-width: 650px) {
+  body .markup .tweet a.expanded-link .expanded-link-description {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  body .markup .apple-podcast-container {
+    width: unset;
+  }
+}
+
+
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed img.install-substack-app-embed-i=
+mg {
+    margin: 0 auto 16px auto;
+  }
+}
+
+
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed .install-substack-app-embed-text=
+ {
+    margin: 0 0 12px 0;
+    max-width: 100%;
+    width: auto;
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed .install-substack-app-embed-link=
+ {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+@media screen and (min-width: 500px) {
+  body .header a.logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+  }
+}
+
+
+@media screen and (max-width: 420px) {
+  body .subscription-receipt table:first-of-type .subscription-amount .subs=
+cription-discount {
+    width: 72px !important;
+  }
+}
+
+
+@media screen and (min-width: 481px) {
+  body .share-button-container {
+    height: auto;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  body .share-button-container .separator {
+    display: block !important;
+    margin: 0 !important;
+    height: 8px !important;
+    border-left: none !important;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .digest .item .post-meta-item.audience {
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: 500px) {
+  .digest-publication .logo img {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .comments-page .container .comment-list .collapsed-reply {
+    margin-left: calc(10 + 32px - 24px);
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .comment > .comment-list {
+    padding-left: 24px;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .finish-magic-login-modal .modal-content .container {
+    padding: 24px 0;
+  }
+}
+
+
+@media (max-width: 650px) {
+  .reader2-text-b3 {
+    line-height: 24px;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .reader2-text-h4 {
+    line-height: 24px;
+  }
+}
+
+
+@media screen and (min-width: 541px) {
+  .user-profile-modal {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .subscribe-widget form.form .sideBySideWrap button.rightButton {
+    padding: 10px 12px;
+  }
+}
+
+
+@media screen and (min-width: 541px) {
+  .pub-icon:hover .logo-hover,
+  .feed-item-icon:hover .logo-hover {
+    display: block;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .post-ufi.single-full-width-button .post-ufi-button-wrapper {
+    width: 100%;
+    padding: 16px;
+  }
+  .post-ufi.single-full-width-button .post-ufi-button-wrapper:empty {
+    display: none;
+  }
+  .post-ufi.single-full-width-button .post-ufi-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper {
+    padding: 0;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper-editor {
+    padding: 0;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper-editor:active {
+    padding: 0;
+  }
+}
+
+
+@media only screen and (max-width: 650px) {
+  .file-embed-button.wide,
+  .file-embed-error-button.wide {
+    display: none;
+  }
+}
+
+
+@media only screen and (min-width: 630px) {
+  .file-embed-button.narrow,
+  .file-embed-error-button.narrow {
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: 541px) {
+  .audio-player-wrapper .audio-player {
+    min-width: 500px;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper .audio-player .audio-player-progress {
+    border-left-width: 16px;
+    border-right-width: 16px;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper .audio-player .audio-player-progress .audio-player-=
+progress-bar .audio-player-progress-bar-popup {
+    top: -54px;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-progress {
+    border-left-width: 16px;
+    border-right-width: 16px;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-progress .audio-p=
+layer-progress-bar .audio-player-progress-bar-popup {
+    top: -54px;
+  }
+}
+
+
+@media (min-width: 250px) {
+  .audio-player-wrapper-fancy .audio-player {
+    padding: 32px;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: flex;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:last-of-type=
+ {
+    display: block;
+  }
+}
+
+
+@media (min-width: 300px) {
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-typ=
+e {
+    display: block;
+  }
+}
+
+
+@media (min-width: 350px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-substack-logo {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-title {
+    margin-top: 16px;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-contai=
+ner {
+    padding-top: 15%;
+    width: 15%;
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-typ=
+e {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-substack-logo {
+    display: block;
+  }
+}
+
+
+@media (min-width: 350px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-contai=
+ner {
+    padding-top: 25%;
+    width: 25%;
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: flex;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-typ=
+e {
+    display: block;
+  }
+}
+
+
+@media (min-width: 400px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-contai=
+ner {
+    padding-top: 40%;
+    width: 40%;
+  }
+}
+
+
+@media (max-width: 400px) {
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    margin-top: 12px;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button {
+    font-size: 13px;
+    padding: 6px 12px;
+    height: auto;
+    margin-top: 10px;
+  }
+}
+
+
+@media (min-width: 600px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-contai=
+ner {
+    padding-top: 55%;
+    width: 55%;
+  }
+}
+
+
+@media (max-width: 650px) {
+  .poll-editor-modal {
+    min-width: calc(100% - 20px);
+  }
+}
+
+
+@media (max-width: 750px) {
+  .poll-embed .poll-anchor-target .poll-anchor-copy-button {
+    left: 8px;
+    top: 45px;
+  }
+}
+
+
+@media screen and (min-width: 541px) {
+  .poll-embed .poll-wrapper.poll-web .poll-dialog .modal-table .modal-row .=
+modal-content > .container {
+    width: 552px;
+    padding: 26px 24px;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .poll-embed .poll-wrapper.poll-web .poll-dialog .modal-table .modal-row .=
+modal-content > .container {
+    padding: 40px 0;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .poll-embed .poll-wrapper.poll-web .poll-dialog .modal-row .modal-cell .m=
+odal-exit-btn {
+    margin-right: -20px;
+  }
+}
+</style></head><body class=3D"email-body" style=3D"font-kerning: auto;"><im=
+g src=3D"https://eotrx.substackcdn.com/open?token=3DeyJtIjoiPDIwMjQwODA1MTY=
+wMTAzLjMuYWYwMWY3NmZiMjFlYzlkNEBtZy1kMC5zdWJzdGFjay5jb20-IiwidSI6MjEzODQ0Mj=
+EyLCJyIjoic291ZmlhbmUuYWxvdWllbGlkcmlzc2lAZXR1LnVhZS5hYy5tYSIsImQiOiJtZy1kM=
+C5zdWJzdGFjay5jb20iLCJwIjoxNDczNjU4NzcsInQiOiJuZXdzbGV0dGVyIiwiYSI6ImV2ZXJ5=
+b25lIiwicyI6MTM1NTIyNiwiYyI6InBvc3QiLCJmIjp0cnVlLCJwb3NpdGlvbiI6InRvcCIsIml=
+hdCI6MTcyMjg3Mzg1MiwiZXhwIjoxNzI1NDY1ODUyLCJpc3MiOiJwdWItMCIsInN1YiI6ImVvIn=
+0.eLGwsTUdEtMB8wJ7rqFIAmwYyjiYqIEbKArfuQmGL9M" alt=3D"" width=3D"1" height=
+=3D"1" border=3D"0" style=3D"height:1px !important;width:1px !important;bor=
+der-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;m=
+argin-right:0 !important;margin-left:0 !important;padding-top:0 !important;=
+padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !impo=
+rtant;"/><div style=3D"display:none;font-size:1px;color:#333333;line-height=
+:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;" class=3D"prev=
+iew">Layered Testing for Robust Software Development</div><div style=3D"dis=
+play:none;font-size:1px;color:#333333;line-height:1px;max-height:0px;max-wi=
+dth:0px;opacity:0;overflow:hidden;" class=3D"preview">&#847; &nbsp; &#8199;=
+ &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &=
+#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &n=
+bsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#8=
+47; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &s=
+hy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#81=
+99; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp=
+; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847;=
+ &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;=
+&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199;=
+ &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &=
+#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &n=
+bsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#8=
+47; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &s=
+hy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#81=
+99; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp=
+; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847;=
+ &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;=
+&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199;=
+ &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &=
+#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &n=
+bsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#8=
+47; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &s=
+hy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#81=
+99; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp=
+; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847;=
+ &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;=
+&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199;=
+ &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &=
+#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &n=
+bsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#8=
+47; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &s=
+hy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#81=
+99; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp=
+; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847;=
+ &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;=
+&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199;=
+ &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &=
+#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &n=
+bsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#8=
+47; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &s=
+hy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#81=
+99; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp=
+; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847;=
+ &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;=
+&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199;=
+ &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &=
+#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &n=
+bsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#8=
+47; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &s=
+hy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#81=
+99; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp=
+; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847;=
+ &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;=
+&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199;=
+ &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &=
+#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &n=
+bsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#8=
+47; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &s=
+hy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#81=
+99; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp=
+; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847;=
+ &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;=
+&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199;=
+ &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &=
+#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &n=
+bsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#8=
+47; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &s=
+hy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#81=
+99; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp=
+; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847;=
+ &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;=
+&#847; &nbsp; &#8199; &shy;&#847; &nbsp; &#8199; &shy;</div><table role=3D"=
+presentation" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" class=3D"email-body-container"><tr><td></td><td width=3D"550" class=3D"c=
+ontent"></td><td></td></tr><tr><td></td><td width=3D"550" align=3D"left" cl=
+ass=3D"content"><div style=3D"font-size: 16px; line-height: 26px; margin: 0=
+ auto; max-width: 550px; overflow-wrap: break-word; width: 100%;"><table ro=
+le=3D"presentation" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0"><tr><td align=3D"right" style=3D"height: 20px;"><table role=3D"pre=
+sentation" width=3D"auto" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">=
+<tr><td style=3D"vertical-align: middle;"><span class=3D"pencraft pc-reset =
+_reset_3axfk_1 tw-font-body tw-text-ssm tw-text-substack-secondary" style=
+=3D"color: rgb(119, 119, 119) !important; font-family: SF Pro Text, -apple-=
+system, system-ui, BlinkMacSystemFont, Inter, Segoe UI, Roboto, Helvetica, =
+Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol !impo=
+rtant; font-size: 13px !important; list-style: none; margin: 0; text-decora=
+tion: unset;"><div class=3D"pencraft pc-reset _align-right_3axfk_16 _size-1=
+2_3axfk_40 _reset_3axfk_1" style=3D"color: unset; font-size: 12px; letter-s=
+pacing: 0px; line-height: 16px; list-style: none; margin: 0; text-align: ri=
+ght; text-decoration: unset;"><span translated class=3D"pencraft pc-reset _=
+reset_3axfk_1" style=3D"color: unset; list-style: none; margin: 0; text-dec=
+oration: unset;">Forwarded this email? <a href=3D"https://substack.com/redi=
+rect/2/eyJlIjoiaHR0cHM6Ly9ibG9nLmFtaWdvc2NvZGUuY29tL3N1YnNjcmliZT91dG1fc291=
+cmNlPWVtYWlsJnV0bV9jYW1wYWlnbj1lbWFpbC1zdWJzY3JpYmUmcj0zamJmOTAmbmV4dD1odHR=
+wcyUzQSUyRiUyRmJsb2cuYW1pZ29zY29kZS5jb20lMkZwJTJGdGhlLXRlc3RpbmctcHlyYW1pZC=
+IsInAiOjE0NzM2NTg3NywicyI6MTM1NTIyNiwiZiI6dHJ1ZSwidSI6MjEzODQ0MjEyLCJpYXQiO=
+jE3MjI4NzM4NTEsImV4cCI6MTcyNTQ2NTg1MSwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJl=
+ZGlyZWN0In0.WFZ9e4DkIPQpYKalMYqvMd8WCjNIboMj8eY6hHSx4_M?" class=3D"pencraft=
+ pc-reset _decoration-underline_3axfk_285 _reset_3axfk_1" style=3D"-webkit-=
+text-decoration-line: underline; color: unset; list-style: none; margin: 0;=
+ text-decoration: unset; text-decoration-line: underline;">Subscribe here</=
+a> for more</span></div></span></td></tr></table></td></tr></table><div dir=
+=3D"auto" class=3D"post typography" style=3D"font-size: 16px; line-height: =
+26px; padding: 16px 0 0 0;"><div class=3D"post-header" style=3D"font-size: =
+16px; line-height: 26px;"><h1 class=3D"post-title published" style=3D"-moz-=
+appearance: optimizelegibility; -moz-osx-font-smoothing: antialiased; -webk=
+it-appearance: optimizelegibility; -webkit-font-smoothing: antialiased; app=
+earance: optimizelegibility; color: rgb(54, 55, 55); font-family: 'SF Pro D=
+isplay', -apple-system-headline, system-ui, -apple-system, BlinkMacSystemFo=
+nt, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', =
+'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 32px; font-weight: bold; li=
+ne-height: 36px; margin: 0;"><a href=3D"https://substack.com/app-link/post?=
+publication_id=3D1355226&post_id=3D147365877&utm_source=3Dpost-email-title&=
+utm_campaign=3Demail-post-title&isFreemail=3Dtrue&r=3D3jbf90&token=3DeyJ1c2=
+VyX2lkIjoyMTM4NDQyMTIsInBvc3RfaWQiOjE0NzM2NTg3NywiaWF0IjoxNzIyODczODUxLCJle=
+HAiOjE3MjU0NjU4NTEsImlzcyI6InB1Yi0xMzU1MjI2Iiwic3ViIjoicG9zdC1yZWFjdGlvbiJ9=
+=2EZfkLMAIAo5DG80HLzN3GlJ-Xj-z3HZ3KtmO=
+Klzsg76g" style=3D"color: rgb(54, 55, 5=
+5); text-decoration: none;">The Testing Pyramid</a></h1><h3 class=3D"subtit=
+le" style=3D"-moz-appearance: optimizelegibility; -moz-osx-font-smoothing: =
+antialiased; -webkit-appearance: optimizelegibility; -webkit-font-smoothing=
+: antialiased; appearance: optimizelegibility; color: #777777; font-family:=
+ 'SF Pro Display', -apple-system-headline, system-ui, -apple-system, BlinkM=
+acSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Colo=
+r Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 18px; font-weight=
+: normal; line-height: 24px; margin: 4px 0 0; margin-top: 12px;">Layered Te=
+sting for Robust Software Development</h3><table role=3D"presentation" widt=
+h=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"post-m=
+eta" style=3D"align-items: center; height: 20px; margin: 1em 0;"><tr><td><t=
+able role=3D"presentation" width=3D"auto" border=3D"0" cellspacing=3D"0" ce=
+llpadding=3D"0"><tr><td><table role=3D"presentation" width=3D"auto" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><td style=3D"vertical-align:=
+ middle;"><div class=3D"pencraft pc-reset _color-primary_3axfk_183 _line-he=
+ight-20_3axfk_95 _font-meta_3axfk_131 _size-11_3axfk_35 _weight-medium_3axf=
+k_162 _transform-uppercase_3axfk_242 _reset_3axfk_1 _meta_3axfk_442 custom-=
+css-email-post-author" style=3D"color: rgb(54, 55, 55); font-family: 'SF Co=
+mpact', -apple-system, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe=
+ UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI =
+Emoji', 'Segoe UI Symbol'; font-size: 11px; font-weight: 500; letter-spacin=
+g: .2px; line-height: 20px; list-style: none; margin: 0; text-decoration: u=
+nset; text-transform: uppercase;"><a style=3D"color: rgb(54, 55, 55); font-=
+family: 'SF Compact', -apple-system, system-ui, -apple-system, BlinkMacSyst=
+emFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoj=
+i', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 11px; font-weight: 500;=
+ letter-spacing: .2px; line-height: 20px; list-style: none; margin: 0; text=
+-decoration: none; text-transform: uppercase;" href=3D"https://substack.com=
+/@amigoscode" class=3D"pencraft pc-reset _color-primary_3axfk_183 _line-hei=
+ght-20_3axfk_95 _font-meta_3axfk_131 _size-11_3axfk_35 _weight-medium_3axfk=
+_162 _transform-uppercase_3axfk_242 _reset_3axfk_1 _meta_3axfk_442">Mama Sa=
+mba Braima Nelson Djalo</a></div></td></tr></table></td></tr><tr><td><table=
+ role=3D"presentation" width=3D"auto" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0"><tr><td style=3D"vertical-align: middle;"><div class=3D"pencraf=
+t pc-reset _color-secondary_3axfk_186 _line-height-20_3axfk_95 _font-meta_3=
+axfk_131 _size-11_3axfk_35 _weight-medium_3axfk_162 _transform-uppercase_3a=
+xfk_242 _reset_3axfk_1 _meta_3axfk_442" style=3D"color: rgb(119, 119, 119);=
+ font-family: 'SF Compact', -apple-system, system-ui, -apple-system, BlinkM=
+acSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Colo=
+r Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 11px; font-weight=
+: 500; letter-spacing: .2px; line-height: 20px; list-style: none; margin: 0=
+; text-decoration: unset; text-transform: uppercase;"><time dateTime=3D"202=
+4-08-05T16:02:42.796Z">Aug 5</time></div></td></tr></table></td></tr></tabl=
+e></td><td align=3D"right"><table role=3D"presentation" width=3D"auto" bord=
+er=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><td style=3D"vertical-alig=
+n: middle;"><a href=3D"https://substack.com/@amigoscode"><img src=3D"https:=
+//substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https=
+%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F68c14faa-=
+cd19-4423-ae47-94d6a9da0774_2160x2160.png" style=3D"border: none !important=
+; border-radius: 500000px; box-sizing: border-box; display: inline; height:=
+ 40px; margin: 0px; max-width: 550px; min-height: 40px; min-width: 40px; ob=
+ject-fit: cover; vertical-align: middle; width: 40px;" width=3D"40" height=
+=3D"40" class=3D"custom-css-email-avatar _avatar_1mh60_65"></a></td></tr></=
+table></td></tr></table><table role=3D"presentation" width=3D"100%" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"email-ufi-2-top" style=
+=3D"border-bottom: 1px solid rgb(0, 0, 0, .1); border-top: 1px solid rgb(0,=
+ 0, 0, .1); min-width: 100%;"><tr height=3D"16"><td height=3D"16" style=3D"=
+font-size: 0px; line-height: 0;">&#160;</td></tr><tr><td><table role=3D"pre=
+sentation" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">=
+<tr><td><table role=3D"presentation" width=3D"auto" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"0"><tr><td style=3D"vertical-align: middle;"><table =
+role=3D"presentation" width=3D"38" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0"><tr><td align=3D"center"><a href=3D"https://substack.com/app-link/=
+post?publication_id=3D1355226&post_id=3D147365877&utm_source=3Dsubstack&isF=
+reemail=3Dtrue&submitLike=3Dtrue&token=3DeyJ1c2VyX2lkIjoyMTM4NDQyMTIsInBvc3=
+RfaWQiOjE0NzM2NTg3NywicmVhY3Rpb24iOiLinaQiLCJpYXQiOjE3MjI4NzM4NTEsImV4cCI6M=
+TcyNTQ2NTg1MSwiaXNzIjoicHViLTEzNTUyMjYiLCJzdWIiOiJyZWFjdGlvbiJ9.tb1x3-8nnQN=
+hjGusyi6zFCLR4wPTPZkNN4N5jfxtz98&utm_medium=3Demail&utm_campaign=3Demail-re=
+action&r=3D3jbf90" style=3D"border: 1px solid rgb(0, 0, 0, .1); border-radi=
+us: 9999px; box-sizing: border-box; color: rgb(119, 119, 119); display: inl=
+ine-block; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Sego=
+e UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI=
+ Emoji', 'Segoe UI Symbol'; font-size: 12px; font-weight: 500; line-height:=
+ 1; min-width: 38px; padding: 9px 0; text-decoration: none; text-transform:=
+ uppercase; width: 38px;" class=3D"email-icon-button"><img src=3D"https://s=
+ubstackcdn.com/image/fetch/w_36,c_scale,f_png,q_auto:good,fl_progressive:st=
+eep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideHeart%3Fv%3D4%26height%3D36%2=
+6fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width=3D"18" height=
+=3D"18" style=3D"border: none !important; max-width: 18px; vertical-align: =
+middle;" alt class=3D"icon"></a></td></tr></table></td><td width=3D"8" styl=
+e=3D"min-width: 8px"></td><td style=3D"vertical-align: middle;"><table role=
+=3D"presentation" width=3D"38" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0"><tr><td align=3D"center"><a href=3D"https://substack.com/app-link/po=
+st?publication_id=3D1355226&post_id=3D147365877&utm_source=3Dsubstack&utm_m=
+edium=3Demail&isFreemail=3Dtrue&comments=3Dtrue&token=3DeyJ1c2VyX2lkIjoyMTM=
+4NDQyMTIsInBvc3RfaWQiOjE0NzM2NTg3NywiaWF0IjoxNzIyODczODUxLCJleHAiOjE3MjU0Nj=
+U4NTEsImlzcyI6InB1Yi0xMzU1MjI2Iiwic3ViIjoicG9zdC1yZWFjdGlvbiJ9.ZfkLMAIAo5DG=
+80HLzN3GlJ-Xj-z3HZ3KtmOKlzsg76g&r=3D3jbf90&utm_campaign=3Demail-half-magic-=
+comments&utm_source=3Dsubstack&utm_medium=3Demail" style=3D"border: 1px sol=
+id rgb(0, 0, 0, .1); border-radius: 9999px; box-sizing: border-box; color: =
+rgb(119, 119, 119); display: inline-block; font-family: system-ui, -apple-s=
+ystem, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif=
+, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 12px=
+; font-weight: 500; line-height: 1; min-width: 38px; padding: 9px 0; text-d=
+ecoration: none; text-transform: uppercase; width: 38px;" class=3D"email-ic=
+on-button"><img src=3D"https://substackcdn.com/image/fetch/w_36,c_scale,f_p=
+ng,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLuc=
+ideComments%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26st=
+rokeWidth%3D2" width=3D"18" height=3D"18" style=3D"border: none !important;=
+ max-width: 18px; vertical-align: middle;" alt class=3D"icon"></a></td></tr=
+></table></td><td width=3D"8" style=3D"min-width: 8px"></td><td style=3D"ve=
+rtical-align: middle;"><table role=3D"presentation" width=3D"38" border=3D"=
+0" cellspacing=3D"0" cellpadding=3D"0"><tr><td align=3D"center"><a href=3D"=
+https://substack.com/app-link/post?publication_id=3D1355226&post_id=3D14736=
+5877&utm_source=3Dsubstack&utm_medium=3Demail&utm_content=3Dshare&utm_campa=
+ign=3Demail-share&action=3Dshare&triggerShare=3Dtrue&isFreemail=3Dtrue&r=3D=
+3jbf90&token=3DeyJ1c2VyX2lkIjoyMTM4NDQyMTIsInBvc3RfaWQiOjE0NzM2NTg3NywiaWF0=
+IjoxNzIyODczODUxLCJleHAiOjE3MjU0NjU4NTEsImlzcyI6InB1Yi0xMzU1MjI2Iiwic3ViIjo=
+icG9zdC1yZWFjdGlvbiJ9.ZfkLMAIAo5DG80HLzN3GlJ-Xj-z3HZ3KtmOKlzsg76g" style=3D=
+"border: 1px solid rgb(0, 0, 0, .1); border-radius: 9999px; box-sizing: bor=
+der-box; color: rgb(119, 119, 119); display: inline-block; font-family: sys=
+tem-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, A=
+rial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';=
+ font-size: 12px; font-weight: 500; line-height: 1; min-width: 38px; paddin=
+g: 9px 0; text-decoration: none; text-transform: uppercase; width: 38px;" c=
+lass=3D"email-icon-button"><img src=3D"https://substackcdn.com/image/fetch/=
+w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.=
+com%2Ficon%2FLucideShare2%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2=
+523808080%26strokeWidth%3D2" width=3D"18" height=3D"18" style=3D"border: no=
+ne !important; max-width: 18px; vertical-align: middle;" alt class=3D"icon"=
+></a></td></tr></table></td><td width=3D"8" style=3D"min-width: 8px"></td><=
+td style=3D"vertical-align: middle;"><table role=3D"presentation" width=3D"=
+38" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><td align=3D"cente=
+r"><a href=3D"https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9vcGVuLnN1Y=
+nN0YWNrLmNvbS9wdWIvYW1pZ29zY29kZS9wL3RoZS10ZXN0aW5nLXB5cmFtaWQ_dXRtX3NvdXJj=
+ZT1zdWJzdGFjayZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj1lbWFpbC1yZXN0YWNrLWN=
+vbW1lbnQmYWN0aW9uPXJlc3RhY2stY29tbWVudCZyPTNqYmY5MCZ0b2tlbj1leUoxYzJWeVgybG=
+tJam95TVRNNE5EUXlNVElzSW5CdmMzUmZhV1FpT2pFME56TTJOVGczTnl3aWFXRjBJam94TnpJe=
+U9EY3pPRFV4TENKbGVIQWlPakUzTWpVME5qVTROVEVzSW1semN5STZJbkIxWWkweE16VTFNakky=
+SWl3aWMzVmlJam9pY0c5emRDMXlaV0ZqZEdsdmJpSjkuWmZrTE1BSUFvNURHODBITHpOM0dsSi1=
+Yai16M0haM0t0bU9LbHpzZzc2ZyIsInAiOjE0NzM2NTg3NywicyI6MTM1NTIyNiwiZiI6dHJ1ZS=
+widSI6MjEzODQ0MjEyLCJpYXQiOjE3MjI4NzM4NTEsImV4cCI6MTcyNTQ2NTg1MSwiaXNzIjoic=
+HViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.3QjQCFK3PxEQquyG6-kB0TeLgbZhGNRlggFt=
+EKFUR54?&utm_source=3Dsubstack&utm_medium=3Demail" style=3D"border: 1px sol=
+id rgb(0, 0, 0, .1); border-radius: 9999px; box-sizing: border-box; color: =
+rgb(119, 119, 119); display: inline-block; font-family: system-ui, -apple-s=
+ystem, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif=
+, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 12px=
+; font-weight: 500; line-height: 1; min-width: 38px; padding: 9px 0; text-d=
+ecoration: none; text-transform: uppercase; width: 38px;" class=3D"email-ic=
+on-button"><img src=3D"https://substackcdn.com/image/fetch/w_36,c_scale,f_p=
+ng,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FNot=
+eForwardIcon%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26s=
+trokeWidth%3D2" width=3D"18" height=3D"18" style=3D"border: none !important=
+; max-width: 18px; vertical-align: middle;" alt class=3D"icon"></a></td></t=
+r></table></td></tr></table></td><td align=3D"right"><table role=3D"present=
+ation" width=3D"auto" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr>=
+<td style=3D"vertical-align: middle;"><table role=3D"presentation" width=3D=
+"auto" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><td align=3D"ce=
+nter"><a href=3D"https://open.substack.com/pub/amigoscode/p/the-testing-pyr=
+amid?utm_source=3Demail&redirect=3Dapp-store" class=3D"email-button-outline=
+" style=3D"border: 1px solid rgb(0, 0, 0, .1); border-radius: 9999px; color=
+: rgb(119, 119, 119); display: inline-block; font-family: system-ui, -apple=
+-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-ser=
+if, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 12=
+px; font-weight: 500; line-height: 12px; padding: 9px 14px; text-decoration=
+: none; text-transform: uppercase;"><div class=3D"email-button-spacer" styl=
+e=3D"display: inline-block; font-size: 16px; line-height: 26px; max-width: =
+0; min-height: 18px; vertical-align: middle;"></div><span style=3D"margin-r=
+ight: 4px; vertical-align: middle;" class=3D"email-button-text">READ IN APP=
+</span><img src=3D"https://substackcdn.com/image/fetch/w_36,c_scale,f_png,q=
+_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideA=
+rrowUpRight%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26st=
+rokeWidth%3D2" width=3D"18" height=3D"18" style=3D"border: none !important;=
+ margin-left: 0; margin-right: 0; max-width: 18px; min-height: 18px; min-wi=
+dth: 18px; vertical-align: middle;" alt class=3D"icon text-icon"></a></td><=
+/tr></table></td></tr></table></td></tr></table></td></tr><tr height=3D"16"=
+><td height=3D"16" style=3D"font-size: 0px; line-height: 0;">&#160;</td></t=
+r></table></div></div><div dir=3D"auto" class=3D"post typography" style=3D"=
+font-size: 16px; line-height: 26px; padding: 16px 0 0 0;"><div dir=3D"auto"=
+ class=3D"body markup" style=3D"font-family: 'SF Pro Display', -apple-syste=
+m, system-ui, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, Helvetica, A=
+rial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';=
+ font-size: 16px; font-weight: 400; line-height: 26px; margin-bottom: 16px;=
+ text-align: initial; width: 100%; word-break: break-word;"><p style=3D"col=
+or: rgb(54, 55, 55); font-size: 16px; line-height: 26px; margin: 0 0 20px 0=
+; margin-top: 0;">Ensuring the quality and reliability of Java applications=
+ is crucial for successful software development. The testing pyramid and va=
+rious testing frameworks play a vital role in achieving this goal. This gui=
+de provides an overview of the testing pyramid followed by a detailed expla=
+nation of five popular Java testing frameworks.</p><h3 class=3D"header-anch=
+or-post" style=3D"-moz-appearance: optimizelegibility; -moz-osx-font-smooth=
+ing: antialiased; -webkit-appearance: optimizelegibility; -webkit-font-smoo=
+thing: antialiased; appearance: optimizelegibility; color: rgb(54, 55, 55);=
+ font-family: 'SF Pro Display', -apple-system-headline, system-ui, -apple-s=
+ystem, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif=
+, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 1.37=
+5em; font-weight: bold; line-height: 1.16em; margin: 1em 0 0.625em 0; posit=
+ion: relative;">The Testing Pyramid</h3><p style=3D"color: rgb(54, 55, 55);=
+ font-size: 16px; line-height: 26px; margin: 0 0 20px 0;">The testing pyram=
+id is a concept that guides the strategy for test automation in software de=
+velopment. It emphasizes the importance of a balanced approach to testing, =
+with a strong foundation of unit tests and a smaller number of higher-level=
+ tests.</p><div class=3D"subscription-widget-wrap" style=3D"font-size: 16px=
+; line-height: 26px;"><div class=3D"subscription-widget show-subscribe" sty=
+le=3D"align-items: flex-start; color: #363737; direction: ltr !important; d=
+isplay: block; font-family: system-ui, -apple-system, BlinkMacSystemFont, '=
+Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Sego=
+e UI Emoji', 'Segoe UI Symbol'; font-size: 16px; font-weight: 400; line-hei=
+ght: 1.5; margin: 24px auto; max-width: 560px; padding: 0px 32px; text-alig=
+n: center; text-decoration: none;"><div class=3D"preamble" style=3D"align-i=
+tems: center; display: flex; font-family: system-ui, -apple-system, BlinkMa=
+cSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color=
+ Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 18px; font-weight:=
+ 400; line-height: 22px; margin-left: auto; margin-right: auto; margin-top:=
+ 16px; max-width: 384px; text-align: center; width: fit-content;"><p style=
+=3D"color: rgb(54, 55, 55); font-size: 16px; line-height: 26px; margin: 0 0=
+ 20px 0;">Thanks for reading Amigoscode Newsletter! Subscribe for free to r=
+eceive new posts and support my work.</p></div><div data-component-name=3D"=
+SubscribeWidget" class=3D"subscribe-widget is-signed-up" style=3D"direction=
+: ltr; font-size: 16px; line-height: 26px; margin: 0 0 1em;"><p class=3D"bu=
+tton-wrapper" style=3D"color: rgb(54, 55, 55); font-size: 16px; line-height=
+: 26px; margin: 0 0 20px 0; text-align: center;"><a href=3D"https://substac=
+k.com/redirect/2/eyJlIjoiaHR0cHM6Ly9ibG9nLmFtaWdvc2NvZGUuY29tL3N1YnNjcmliZT=
+91dG1fc291cmNlPXBvc3QmdXRtX2NhbXBhaWduPWVtYWlsLWNoZWNrb3V0Jm5leHQ9aHR0cHMlM=
+0ElMkYlMkZibG9nLmFtaWdvc2NvZGUuY29tJTJGcCUyRnRoZS10ZXN0aW5nLXB5cmFtaWQmcj0z=
+amJmOTAiLCJwIjoxNDczNjU4NzcsInMiOjEzNTUyMjYsImYiOnRydWUsInUiOjIxMzg0NDIxMiw=
+iaWF0IjoxNzIyODczODUxLCJleHAiOjE3MjU0NjU4NTEsImlzcyI6InB1Yi0wIiwic3ViIjoibG=
+luay1yZWRpcmVjdCJ9.rtCqmHI1zH7U_AO5EYPdESQiYhJRmZyYm8AAkzHxL_w?&utm_medium=
+=3Demail&utm_source=3Dsubscribe-widget-preamble&utm_content=3D147365877" cl=
+ass=3D"button subscribe-btn primary" style=3D"background-color: #7f56d9; bo=
+rder: none; border-radius: 8px; box-sizing: border-box; color: #ffffff !imp=
+ortant; cursor: pointer; display: inline-block; font-family: system-ui, -ap=
+ple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-=
+serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size:=
+ 14px; font-weight: 600; height: auto; line-height: 20px; margin: 0 auto; o=
+pacity: 1; outline: none; padding: 12px 20px; text-align: center; text-deco=
+ration: none !important; white-space: nowrap;"><span style=3D"color: #fffff=
+f; text-decoration: none;">Pledge your support</span></a></p></div></div></=
+div><h4 class=3D"header-anchor-post" style=3D"-moz-appearance: optimizelegi=
+bility; -moz-osx-font-smoothing: antialiased; -webkit-appearance: optimizel=
+egibility; -webkit-font-smoothing: antialiased; appearance: optimizelegibil=
+ity; color: rgb(54, 55, 55); font-family: 'SF Pro Display', -apple-system-h=
+eadline, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, =
+Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe=
+ UI Symbol'; font-size: 1.125em; font-weight: bold; line-height: 1.16em; ma=
+rgin: 1em 0 0.625em 0; position: relative;">Layers of the Testing Pyramid:<=
+/h4><ul style=3D"margin-top: 0; padding: 0;"><li style=3D"margin: 8px 0 0 3=
+2px; mso-special-format: bullet;"><p style=3D"box-sizing: border-box; color=
+: rgb(54, 55, 55); font-size: 16px; line-height: 26px; margin: 0; margin-bo=
+ttom: 0; padding-left: 4px;"><strong>Unit Tests</strong><span>: Form the ba=
+se of the pyramid, focusing on individual components of the code. They are =
+fast, reliable, and provide immediate feedback.</span></p></li><li style=3D=
+"margin: 8px 0 0 32px; mso-special-format: bullet;"><p style=3D"box-sizing:=
+ border-box; color: rgb(54, 55, 55); font-size: 16px; line-height: 26px; ma=
+rgin: 0; margin-bottom: 0; padding-left: 4px;"><strong>Integration Tests</s=
+trong><span>: Ensure that different components of the application work toge=
+ther as expected. They are broader in scope than unit tests but still relat=
+ively fast and reliable.</span></p></li><li style=3D"margin: 8px 0 0 32px; =
+mso-special-format: bullet;"><p style=3D"box-sizing: border-box; color: rgb=
+(54, 55, 55); font-size: 16px; line-height: 26px; margin: 0; margin-bottom:=
+ 0; padding-left: 4px;"><strong>End-to-End Tests</strong><span>: Test the e=
+ntire application workflow from start to finish, ensuring that the system a=
+s a whole meets the requirements. These tests are slower and more complex b=
+ut crucial for catching issues that may not be evident in isolated componen=
+ts.</span></p></li><li style=3D"margin: 8px 0 0 32px; mso-special-format: b=
+ullet;"><p style=3D"box-sizing: border-box; color: rgb(54, 55, 55); font-si=
+ze: 16px; line-height: 26px; margin: 0; margin-bottom: 0; padding-left: 4px=
+;"><strong>UI Tests</strong><span>: Represent the top layer of the pyramid,=
+ focusing on testing the user interface. These tests are the most brittle a=
+nd time-consuming, but they are essential for ensuring a positive user expe=
+rience.</span></p></li></ul><div class=3D"captioned-image-container-static"=
+ style=3D"font-size: 16px; line-height: 26px; margin: 32px auto;"><figure s=
+tyle=3D"margin: 0 auto; width: 100%;"><table class=3D"image-wrapper" width=
+=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" data-component-n=
+ame=3D"Image2ToDOMStatic" style=3D"mso-padding-alt: 1em 0 1.6em;"><tbody><t=
+r><td style=3D"text-align: center;"></td><td align=3D"left" class=3D"conten=
+t" width=3D"550" style=3D"text-align: center;"><a class=3D"image-link" targ=
+et=3D"_blank" href=3D"https://substack.com/redirect/2e07a3b9-9cd9-429a-a6a3=
+-9e44d0a23987?j=3DeyJ1IjoiM2piZjkwIn0.SANLSvacVpokI3GQinRJ38eMn_sW279gjfrxh=
+QGBbiM" rel style=3D"align-items: center; border: none; display: block; fle=
+x-direction: column; height: auto; margin: 0; padding: 0; position: relativ=
+e; text-decoration: none; width: auto;"><img data-attrs=3D"{&quot;src&quot;=
+:&quot;https://substack-post-media.s3.amazonaws.com/public/images/444492da-=
+b179-43d4-8afa-8f4e2df4335b_555x589.gif&quot;,&quot;srcNoWatermark&quot;:nu=
+ll,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot=
+;:589,&quot;width&quot;:555,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:=
+689036,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;i=
+mage/gif&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:false,&quot;t=
+opImage&quot;:true,&quot;internalRedirect&quot;:null}" alt width=3D"550" he=
+ight=3D"583.6936936936937" class src=3D"https://substackcdn.com/image/fetch=
+/w_550,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubsta=
+ck-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F444492da-b179-43d4-8afa-=
+8f4e2df4335b_555x589.gif" style=3D"-ms-interpolation-mode: bicubic; border:=
+ none !important; display: block; height: auto; margin: 0 auto; margin-bott=
+om: 0; max-width: 100% !important; vertical-align: middle; width: auto !imp=
+ortant;"></a></td><td style=3D"text-align: center;"></td></tr></tbody></tab=
+le></figure></div><p style=3D"color: rgb(54, 55, 55); font-size: 16px; line=
+-height: 26px; margin: 0 0 20px 0;"></p><h3 class=3D"header-anchor-post" st=
+yle=3D"-moz-appearance: optimizelegibility; -moz-osx-font-smoothing: antial=
+iased; -webkit-appearance: optimizelegibility; -webkit-font-smoothing: anti=
+aliased; appearance: optimizelegibility; color: rgb(54, 55, 55); font-famil=
+y: 'SF Pro Display', -apple-system-headline, system-ui, -apple-system, Blin=
+kMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Co=
+lor Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 1.375em; font-w=
+eight: bold; line-height: 1.16em; margin: 1em 0 0.625em 0; position: relati=
+ve;">5 Testing Frameworks / Libraries For Java Devs</h3><p style=3D"color: =
+rgb(54, 55, 55); font-size: 16px; line-height: 26px; margin: 0 0 20px 0;">T=
+o effectively implement the testing pyramid, it's important to choose the r=
+ight testing frameworks. Here are five popular Java testing frameworks, eac=
+h with its unique strengths and purposes.</p><h4 class=3D"header-anchor-pos=
+t" style=3D"-moz-appearance: optimizelegibility; -moz-osx-font-smoothing: a=
+ntialiased; -webkit-appearance: optimizelegibility; -webkit-font-smoothing:=
+ antialiased; appearance: optimizelegibility; color: rgb(54, 55, 55); font-=
+family: 'SF Pro Display', -apple-system-headline, system-ui, -apple-system,=
+ BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'App=
+le Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 1.125em; f=
+ont-weight: bold; line-height: 1.16em; margin: 1em 0 0.625em 0; position: r=
+elative;">1. JUnit</h4><ul style=3D"margin-top: 0; padding: 0;"><li style=
+=3D"margin: 8px 0 0 32px; mso-special-format: bullet;"><p style=3D"box-sizi=
+ng: border-box; color: rgb(54, 55, 55); font-size: 16px; line-height: 26px;=
+ margin: 0; margin-bottom: 0; padding-left: 4px;"><strong>Purpose</strong><=
+span>: Widely used for unit testing.</span></p></li><li style=3D"margin: 8p=
+x 0 0 32px; mso-special-format: bullet;"><p style=3D"box-sizing: border-box=
+; color: rgb(54, 55, 55); font-size: 16px; line-height: 26px; margin: 0; ma=
+rgin-bottom: 0; padding-left: 4px;"><strong>Features</strong><span>: Simple=
+, user-friendly, and integrates well with development tools.</span></p></li=
+><li style=3D"margin: 8px 0 0 32px; mso-special-format: bullet;"><p style=
+=3D"box-sizing: border-box; color: rgb(54, 55, 55); font-size: 16px; line-h=
+eight: 26px; margin: 0; margin-bottom: 0; padding-left: 4px;"><strong>Usage=
+</strong><span>: Ideal for writing and running repeatable tests, ensuring t=
+hat individual parts of the code (units) function correctly.</span></p></li=
+></ul><h4 class=3D"header-anchor-post" style=3D"-moz-appearance: optimizele=
+gibility; -moz-osx-font-smoothing: antialiased; -webkit-appearance: optimiz=
+elegibility; -webkit-font-smoothing: antialiased; appearance: optimizelegib=
+ility; color: rgb(54, 55, 55); font-family: 'SF Pro Display', -apple-system=
+-headline, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto=
+, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Seg=
+oe UI Symbol'; font-size: 1.125em; font-weight: bold; line-height: 1.16em; =
+margin: 1em 0 0.625em 0; position: relative;">2. TestNG</h4><ul style=3D"ma=
+rgin-top: 0; padding: 0;"><li style=3D"margin: 8px 0 0 32px; mso-special-fo=
+rmat: bullet;"><p style=3D"box-sizing: border-box; color: rgb(54, 55, 55); =
+font-size: 16px; line-height: 26px; margin: 0; margin-bottom: 0; padding-le=
+ft: 4px;"><strong>Purpose</strong><span>: Supports various testing categori=
+es.</span></p></li><li style=3D"margin: 8px 0 0 32px; mso-special-format: b=
+ullet;"><p style=3D"box-sizing: border-box; color: rgb(54, 55, 55); font-si=
+ze: 16px; line-height: 26px; margin: 0; margin-bottom: 0; padding-left: 4px=
+;"><strong>Features</strong><span>: Flexible, scalable, and suitable for bo=
+th simple and complex tests.</span></p></li><li style=3D"margin: 8px 0 0 32=
+px; mso-special-format: bullet;"><p style=3D"box-sizing: border-box; color:=
+ rgb(54, 55, 55); font-size: 16px; line-height: 26px; margin: 0; margin-bot=
+tom: 0; padding-left: 4px;"><strong>Usage</strong><span>: Offers advanced f=
+unctionalities such as parallel testing, data-driven testing, and comprehen=
+sive reporting, making it a versatile choice for different testing needs.</=
+span></p></li></ul><h4 class=3D"header-anchor-post" style=3D"-moz-appearanc=
+e: optimizelegibility; -moz-osx-font-smoothing: antialiased; -webkit-appear=
+ance: optimizelegibility; -webkit-font-smoothing: antialiased; appearance: =
+optimizelegibility; color: rgb(54, 55, 55); font-family: 'SF Pro Display', =
+-apple-system-headline, system-ui, -apple-system, BlinkMacSystemFont, 'Sego=
+e UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI=
+ Emoji', 'Segoe UI Symbol'; font-size: 1.125em; font-weight: bold; line-hei=
+ght: 1.16em; margin: 1em 0 0.625em 0; position: relative;">3. Selenium</h4>=
+<ul style=3D"margin-top: 0; padding: 0;"><li style=3D"margin: 8px 0 0 32px;=
+ mso-special-format: bullet;"><p style=3D"box-sizing: border-box; color: rg=
+b(54, 55, 55); font-size: 16px; line-height: 26px; margin: 0; margin-bottom=
+: 0; padding-left: 4px;"><strong>Purpose</strong><span>: Automation framewo=
+rk for web browsers.</span></p></li><li style=3D"margin: 8px 0 0 32px; mso-=
+special-format: bullet;"><p style=3D"box-sizing: border-box; color: rgb(54,=
+ 55, 55); font-size: 16px; line-height: 26px; margin: 0; margin-bottom: 0; =
+padding-left: 4px;"><strong>Features</strong><span>: Cross-platform support=
+, integrates with TestNG/JUnit, and has strong community support.</span></p=
+></li><li style=3D"margin: 8px 0 0 32px; mso-special-format: bullet;"><p st=
+yle=3D"box-sizing: border-box; color: rgb(54, 55, 55); font-size: 16px; lin=
+e-height: 26px; margin: 0; margin-bottom: 0; padding-left: 4px;"><strong>Us=
+age</strong><span>: Essential for automating web application testing, ensur=
+ing that web interfaces function as expected across different browsers and =
+platforms.</span></p></li></ul><h4 class=3D"header-anchor-post" style=3D"-m=
+oz-appearance: optimizelegibility; -moz-osx-font-smoothing: antialiased; -w=
+ebkit-appearance: optimizelegibility; -webkit-font-smoothing: antialiased; =
+appearance: optimizelegibility; color: rgb(54, 55, 55); font-family: 'SF Pr=
+o Display', -apple-system-headline, system-ui, -apple-system, BlinkMacSyste=
+mFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji=
+', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 1.125em; font-weight: bo=
+ld; line-height: 1.16em; margin: 1em 0 0.625em 0; position: relative;">4. C=
+ucumber</h4><ul style=3D"margin-top: 0; padding: 0;"><li style=3D"margin: 8=
+px 0 0 32px; mso-special-format: bullet;"><p style=3D"box-sizing: border-bo=
+x; color: rgb(54, 55, 55); font-size: 16px; line-height: 26px; margin: 0; m=
+argin-bottom: 0; padding-left: 4px;"><strong>Purpose</strong><span>: Behavi=
+or-driven development (BDD) tool.</span></p></li><li style=3D"margin: 8px 0=
+ 0 32px; mso-special-format: bullet;"><p style=3D"box-sizing: border-box; c=
+olor: rgb(54, 55, 55); font-size: 16px; line-height: 26px; margin: 0; margi=
+n-bottom: 0; padding-left: 4px;"><strong>Features</strong><span>: Enhances =
+communication with non-technical stakeholders.</span></p></li><li style=3D"=
+margin: 8px 0 0 32px; mso-special-format: bullet;"><p style=3D"box-sizing: =
+border-box; color: rgb(54, 55, 55); font-size: 16px; line-height: 26px; mar=
+gin: 0; margin-bottom: 0; padding-left: 4px;"><strong>Usage</strong><span>:=
+ Uses plain language specifications to write tests, which helps bridge the =
+gap between developers and business stakeholders by making test cases more =
+understandable.</span></p></li></ul><h4 class=3D"header-anchor-post" style=
+=3D"-moz-appearance: optimizelegibility; -moz-osx-font-smoothing: antialias=
+ed; -webkit-appearance: optimizelegibility; -webkit-font-smoothing: antiali=
+ased; appearance: optimizelegibility; color: rgb(54, 55, 55); font-family: =
+'SF Pro Display', -apple-system-headline, system-ui, -apple-system, BlinkMa=
+cSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color=
+ Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 1.125em; font-weig=
+ht: bold; line-height: 1.16em; margin: 1em 0 0.625em 0; position: relative;=
+">5. Mockito</h4><ul style=3D"margin-top: 0; padding: 0;"><li style=3D"marg=
+in: 8px 0 0 32px; mso-special-format: bullet;"><p style=3D"box-sizing: bord=
+er-box; color: rgb(54, 55, 55); font-size: 16px; line-height: 26px; margin:=
+ 0; margin-bottom: 0; padding-left: 4px;"><strong>Purpose</strong><span>: M=
+ocking framework for unit tests.</span></p></li><li style=3D"margin: 8px 0 =
+0 32px; mso-special-format: bullet;"><p style=3D"box-sizing: border-box; co=
+lor: rgb(54, 55, 55); font-size: 16px; line-height: 26px; margin: 0; margin=
+-bottom: 0; padding-left: 4px;"><strong>Features</strong><span>: Easy to us=
+e, reduces boilerplate code, and integrates with JUnit/TestNG.</span></p></=
+li><li style=3D"margin: 8px 0 0 32px; mso-special-format: bullet;"><p style=
+=3D"box-sizing: border-box; color: rgb(54, 55, 55); font-size: 16px; line-h=
+eight: 26px; margin: 0; margin-bottom: 0; padding-left: 4px;"><strong>Usage=
+</strong><span>: Useful for creating mock objects in unit tests, allowing d=
+evelopers to test parts of the code in isolation without relying on externa=
+l dependencies.</span></p></li></ul><p style=3D"color: rgb(54, 55, 55); fon=
+t-size: 16px; line-height: 26px; margin: 0 0 20px 0;"></p><div class=3D"cap=
+tioned-image-container-static" style=3D"font-size: 16px; line-height: 26px;=
+ margin: 32px auto;"><figure style=3D"margin: 0 auto; width: 100%;"><table =
+class=3D"image-wrapper" width=3D"100%" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" data-component-name=3D"Image2ToDOMStatic" style=3D"mso-padding=
+-alt: 1em 0 1.6em;"><tbody><tr><td style=3D"text-align: center;"></td><td a=
+lign=3D"left" class=3D"content" width=3D"550" style=3D"text-align: center;"=
+><a class=3D"image-link" target=3D"_blank" href=3D"https://substack.com/red=
+irect/76fb2244-0463-43c5-934d-9b2cfa73261c?j=3DeyJ1IjoiM2piZjkwIn0.SANLSvac=
+VpokI3GQinRJ38eMn_sW279gjfrxhQGBbiM" rel style=3D"align-items: center; bord=
+er: none; display: block; flex-direction: column; height: auto; margin: 0; =
+padding: 0; position: relative; text-decoration: none; width: auto;"><img d=
+ata-attrs=3D"{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaw=
+s.com/public/images/61b728bf-bad4-4c13-b286-e73155c023e1_800x1029.gif&quot;=
+,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSiz=
+e&quot;:null,&quot;height&quot;:1029,&quot;width&quot;:800,&quot;resizeWidt=
+h&quot;:null,&quot;bytes&quot;:3974413,&quot;alt&quot;:null,&quot;title&quo=
+t;:null,&quot;type&quot;:&quot;image/gif&quot;,&quot;href&quot;:null,&quot;=
+belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&q=
+uot;:null}" alt width=3D"550" height=3D"707.4375" class src=3D"https://subs=
+tackcdn.com/image/fetch/w_550,c_limit,f_auto,q_auto:good,fl_progressive:ste=
+ep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6=
+1b728bf-bad4-4c13-b286-e73155c023e1_800x1029.gif" style=3D"-ms-interpolatio=
+n-mode: bicubic; border: none !important; display: block; height: auto; mar=
+gin: 0 auto; margin-bottom: 0; max-width: 100% !important; vertical-align: =
+middle; width: auto !important;"></a></td><td style=3D"text-align: center;"=
+></td></tr></tbody></table></figure></div><h1 class=3D"header-anchor-post" =
+style=3D"-moz-appearance: optimizelegibility; -moz-osx-font-smoothing: anti=
+aliased; -webkit-appearance: optimizelegibility; -webkit-font-smoothing: an=
+tialiased; appearance: optimizelegibility; color: rgb(54, 55, 55); font-fam=
+ily: 'SF Pro Display', -apple-system-headline, system-ui, -apple-system, Bl=
+inkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple =
+Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 2em; font-wei=
+ght: bold; line-height: 1.16em; margin: 1em 0 0.625em 0; position: relative=
+;">Question </h1><table cellSpacing=3D"16px" width=3D"100%" class=3D"poll-e=
+mbed poll-email" style=3D"margin: 32px auto; max-width: 600px;"><tbody><tr>=
+<td align=3D"center"><table role=3D"presentation" width=3D"auto" border=3D"=
+0" cellspacing=3D"0" cellpadding=3D"0" data-component-name=3D"StaticPoll" c=
+lass=3D"poll-email-wrapper" style=3D"border: 1px solid rgb(0, 0, 0, .1); bo=
+rder-radius: 12px; color: rgb(54, 55, 55); font-family: system-ui, -apple-s=
+ystem, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif=
+, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; padding: 16px 1=
+6px 8px; width: 100%;"><tr><td><table role=3D"presentation" width=3D"100%" =
+border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><td class=3D"poll-head=
+er" style=3D"color: rgb(119, 119, 119); font-size: 12px; font-weight: 500; =
+line-height: 20px; margin-bottom: 4px; padding: 0;">POLL</td></tr><tr width=
+=3D"100%" class=3D"poll-question" style=3D"color: rgb(54, 55, 55); font-fam=
+ily: 'SF Pro Display', -apple-system-headline, system-ui, -apple-system, Bl=
+inkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple =
+Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 20px; font-we=
+ight: 800; line-height: 32px; margin-bottom: 8px; vertical-align: top;"><td=
+>Do you always test your code?</td></tr><tr><td><table role=3D"presentation=
+" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"=
+poll-options" style=3D"border-spacing: 0 12px;"><tr><td width=3D"100%" clas=
+s=3D"poll-option"><a href=3D"https://substack.com/redirect/2/eyJlIjoiaHR0cH=
+M6Ly9ibG9nLmFtaWdvc2NvZGUuY29tL2FwaS92MS9wb2xsL3ZvdGUvZW1haWw_dG9rZW49ZXlKM=
+WMyVnlYMmxrSWpveU1UTTRORFF5TVRJc0luQnZjM1JmYVdRaU9qRTBOek0yTlRnM055d2ljRzlz=
+YkY5cFpDSTZNakF3TVRVNExDSndiMnhzWDI5d2RHbHZibDlwWkNJNk56RTFOVEF4TENKcFlYUWl=
+PakUzTWpJNE56TTROVEVzSW1WNGNDSTZNVGN5TlRRMk5UZzFNU3dpYVhOeklqb2ljSFZpTFRFek=
+5UVXlNallpTENKemRXSWlPaUp3YjJ4c0xYWnZkR1VpZlEuNkpoTzY3RlJ3Y2NPY3NOM1ZBLWhqR=
+1g5TUVoZXh5SG9vbkotY3FyUnF1OCIsInAiOjE0NzM2NTg3NywicyI6MTM1NTIyNiwiZiI6dHJ1=
+ZSwidSI6MjEzODQ0MjEyLCJpYXQiOjE3MjI4NzM4NTEsImV4cCI6MTcyNTQ2NTg1MSwiaXNzIjo=
+icHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.KhT7AsQXxQnfp5ahyi_gmvDmlLvavjMQLG=
+KmWhtI96A?" width=3D"100%" class=3D"poll-vote-link" style=3D"background-col=
+or: rgb(238, 238, 238); border: 1px solid rgb(0, 0, 0, .1); border-radius: =
+8px; color: rgb(119, 119, 119); display: block; height: 100%; padding: 10px=
+ 0; text-align: center; text-decoration: none; width: 100%;"><div class=3D"=
+poll-vote-contents" style=3D"color: rgb(54, 55, 55); display: block; font-s=
+ize: 14px; font-weight: 700; height: 100%; line-height: 20px; width: 100%;"=
+>Yes is a must &#9989;</div></a></td></tr><tr><td width=3D"100%" class=3D"p=
+oll-option"><a href=3D"https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9i=
+bG9nLmFtaWdvc2NvZGUuY29tL2FwaS92MS9wb2xsL3ZvdGUvZW1haWw_dG9rZW49ZXlKMWMyVnl=
+YMmxrSWpveU1UTTRORFF5TVRJc0luQnZjM1JmYVdRaU9qRTBOek0yTlRnM055d2ljRzlzYkY5cF=
+pDSTZNakF3TVRVNExDSndiMnhzWDI5d2RHbHZibDlwWkNJNk56RTFOVEF5TENKcFlYUWlPakUzT=
+WpJNE56TTROVEVzSW1WNGNDSTZNVGN5TlRRMk5UZzFNU3dpYVhOeklqb2ljSFZpTFRFek5UVXlN=
+allpTENKemRXSWlPaUp3YjJ4c0xYWnZkR1VpZlEuQ0twRE4wM09vZ0VHTWZzV05VVV9UUkxrM2l=
+TTEpIRUhKRmQ2X2dmM0RBMCIsInAiOjE0NzM2NTg3NywicyI6MTM1NTIyNiwiZiI6dHJ1ZSwidS=
+I6MjEzODQ0MjEyLCJpYXQiOjE3MjI4NzM4NTEsImV4cCI6MTcyNTQ2NTg1MSwiaXNzIjoicHViL=
+TAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.-V-UEiniqVqdMSuj63p23oQRzJQhgRXPOOyWrybw=
+Zy8?" width=3D"100%" class=3D"poll-vote-link" style=3D"background-color: rg=
+b(238, 238, 238); border: 1px solid rgb(0, 0, 0, .1); border-radius: 8px; c=
+olor: rgb(119, 119, 119); display: block; height: 100%; padding: 10px 0; te=
+xt-align: center; text-decoration: none; width: 100%;"><div class=3D"poll-v=
+ote-contents" style=3D"color: rgb(54, 55, 55); display: block; font-size: 1=
+4px; font-weight: 700; height: 100%; line-height: 20px; width: 100%;">Somet=
+imes not always</div></a></td></tr><tr><td width=3D"100%" class=3D"poll-opt=
+ion"><a href=3D"https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9ibG9nLmF=
+taWdvc2NvZGUuY29tL2FwaS92MS9wb2xsL3ZvdGUvZW1haWw_dG9rZW49ZXlKMWMyVnlYMmxrSW=
+pveU1UTTRORFF5TVRJc0luQnZjM1JmYVdRaU9qRTBOek0yTlRnM055d2ljRzlzYkY5cFpDSTZNa=
+kF3TVRVNExDSndiMnhzWDI5d2RHbHZibDlwWkNJNk56RTFOVEF6TENKcFlYUWlPakUzTWpJNE56=
+TTROVEVzSW1WNGNDSTZNVGN5TlRRMk5UZzFNU3dpYVhOeklqb2ljSFZpTFRFek5UVXlNallpTEN=
+KemRXSWlPaUp3YjJ4c0xYWnZkR1VpZlEualExc0Q3OVhRRVlZZ3E3dFFOTnAyVlZYMVg2OE01dH=
+R4Q21uSm9HS3o0dyIsInAiOjE0NzM2NTg3NywicyI6MTM1NTIyNiwiZiI6dHJ1ZSwidSI6MjEzO=
+DQ0MjEyLCJpYXQiOjE3MjI4NzM4NTEsImV4cCI6MTcyNTQ2NTg1MSwiaXNzIjoicHViLTAiLCJz=
+dWIiOiJsaW5rLXJlZGlyZWN0In0.shWys8j2KdyawEVKRGw8d_JM_zaZaxmLXtgAQBrJ2WM?" w=
+idth=3D"100%" class=3D"poll-vote-link" style=3D"background-color: rgb(238, =
+238, 238); border: 1px solid rgb(0, 0, 0, .1); border-radius: 8px; color: r=
+gb(119, 119, 119); display: block; height: 100%; padding: 10px 0; text-alig=
+n: center; text-decoration: none; width: 100%;"><div class=3D"poll-vote-con=
+tents" style=3D"color: rgb(54, 55, 55); display: block; font-size: 14px; fo=
+nt-weight: 700; height: 100%; line-height: 20px; width: 100%;">Fudge testin=
+g &#128514;</div></a></td></tr></table></td></tr></table></td></tr></table>=
+</td></tr></tbody></table><p style=3D"color: rgb(54, 55, 55); font-size: 16=
+px; line-height: 26px; margin: 0 0 20px 0;"></p><h1 class=3D"header-anchor-=
+post" style=3D"-moz-appearance: optimizelegibility; -moz-osx-font-smoothing=
+: antialiased; -webkit-appearance: optimizelegibility; -webkit-font-smoothi=
+ng: antialiased; appearance: optimizelegibility; color: rgb(54, 55, 55); fo=
+nt-family: 'SF Pro Display', -apple-system-headline, system-ui, -apple-syst=
+em, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, '=
+Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 2em; fo=
+nt-weight: bold; line-height: 1.16em; margin: 1em 0 0.625em 0; position: re=
+lative;">Bonus &#127873; </h1><h3 class=3D"header-anchor-post" style=3D"-mo=
+z-appearance: optimizelegibility; -moz-osx-font-smoothing: antialiased; -we=
+bkit-appearance: optimizelegibility; -webkit-font-smoothing: antialiased; a=
+ppearance: optimizelegibility; color: rgb(54, 55, 55); font-family: 'SF Pro=
+ Display', -apple-system-headline, system-ui, -apple-system, BlinkMacSystem=
+Font, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji'=
+, 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 1.375em; font-weight: bol=
+d; line-height: 1.16em; margin: 1em 0 0.625em 0; position: relative;">Types=
+ of API Testing</h3><div class=3D"captioned-image-container-static" style=
+=3D"font-size: 16px; line-height: 26px; margin: 32px auto;"><figure style=
+=3D"margin: 0 auto; width: 100%;"><table class=3D"image-wrapper" width=3D"1=
+00%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" data-component-name=
+=3D"Image2ToDOMStatic" style=3D"mso-padding-alt: 1em 0 1.6em;"><tbody><tr><=
+td style=3D"text-align: center;"></td><td align=3D"left" class=3D"content" =
+width=3D"1456" style=3D"text-align: center;"><a class=3D"image-link" target=
+=3D"_blank" href=3D"https://substack.com/redirect/01cab156-2600-4af1-83c7-3=
+0440d11e9d2?j=3DeyJ1IjoiM2piZjkwIn0.SANLSvacVpokI3GQinRJ38eMn_sW279gjfrxhQG=
+BbiM" rel style=3D"align-items: center; border: none; display: block; flex-=
+direction: column; height: auto; margin: 0; padding: 0; position: relative;=
+ text-decoration: none; width: auto;"><img data-attrs=3D"{&quot;src&quot;:&=
+quot;https://substack-post-media.s3.amazonaws.com/public/images/69a59c5d-87=
+21-4c2e-bd2c-173cf5ca6b6a_2400x2974.png&quot;,&quot;srcNoWatermark&quot;:nu=
+ll,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot=
+;:1804,&quot;width&quot;:1456,&quot;resizeWidth&quot;:null,&quot;bytes&quot=
+;:1151185,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quo=
+t;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot=
+;topImage&quot;:false,&quot;internalRedirect&quot;:null}" alt width=3D"550"=
+ height=3D"681.4560439560439" class=3D"wide-image" src=3D"https://substackc=
+dn.com/image/fetch/w_2912,c_limit,f_auto,q_auto:good,fl_progressive:steep/h=
+ttps%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F69a59=
+c5d-8721-4c2e-bd2c-173cf5ca6b6a_2400x2974.png" style=3D"-ms-interpolation-m=
+ode: bicubic; border: none !important; display: block; height: auto; margin=
+: 0 auto; margin-bottom: 0; max-width: 100% !important; vertical-align: mid=
+dle; width: auto !important;"></a></td><td style=3D"text-align: center;"></=
+td></tr></tbody></table></figure></div><p style=3D"color: rgb(54, 55, 55); =
+font-size: 16px; line-height: 26px; margin: 0 0 20px 0;">I&#8217;ll discuss=
+ this diagram in a future blog.</p><p style=3D"color: rgb(54, 55, 55); font=
+-size: 16px; line-height: 26px; margin: 0 0 20px 0;">Happy Coding &#128075;=
+&#127999;</p><div class=3D"subscription-widget-wrap" style=3D"font-size: 16=
+px; line-height: 26px; margin-bottom: 0;"><div class=3D"subscription-widget=
+ show-subscribe" style=3D"align-items: flex-start; color: #363737; directio=
+n: ltr !important; display: block; font-family: system-ui, -apple-system, B=
+linkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple=
+ Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 16px; font-w=
+eight: 400; line-height: 1.5; margin: 24px auto; max-width: 560px; padding:=
+ 0px 32px; text-align: center; text-decoration: none;"><div class=3D"preamb=
+le" style=3D"align-items: center; display: flex; font-family: system-ui, -a=
+pple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans=
+-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size=
+: 18px; font-weight: 400; line-height: 22px; margin-left: auto; margin-righ=
+t: auto; margin-top: 16px; max-width: 384px; text-align: center; width: fit=
+-content;"><p style=3D"color: rgb(54, 55, 55); font-size: 16px; line-height=
+: 26px; margin: 0 0 20px 0;">Thanks for reading Amigoscode Newsletter! Subs=
+cribe for free to receive new posts and support my work.</p></div><div data=
+-component-name=3D"SubscribeWidget" class=3D"subscribe-widget is-signed-up"=
+ style=3D"direction: ltr; font-size: 16px; line-height: 26px; margin: 0 0 1=
+em;"><p class=3D"button-wrapper" style=3D"color: rgb(54, 55, 55); font-size=
+: 16px; line-height: 26px; margin: 0 0 20px 0; text-align: center;"><a href=
+=3D"https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9ibG9nLmFtaWdvc2NvZGU=
+uY29tL3N1YnNjcmliZT91dG1fc291cmNlPXBvc3QmdXRtX2NhbXBhaWduPWVtYWlsLWNoZWNrb3=
+V0Jm5leHQ9aHR0cHMlM0ElMkYlMkZibG9nLmFtaWdvc2NvZGUuY29tJTJGcCUyRnRoZS10ZXN0a=
+W5nLXB5cmFtaWQmcj0zamJmOTAiLCJwIjoxNDczNjU4NzcsInMiOjEzNTUyMjYsImYiOnRydWUs=
+InUiOjIxMzg0NDIxMiwiaWF0IjoxNzIyODczODUxLCJleHAiOjE3MjU0NjU4NTEsImlzcyI6InB=
+1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.rtCqmHI1zH7U_AO5EYPdESQiYhJRmZyYm8AAk=
+zHxL_w?&utm_medium=3Demail&utm_source=3Dsubscribe-widget-preamble&utm_conte=
+nt=3D147365877" class=3D"button subscribe-btn primary" style=3D"background-=
+color: #7f56d9; border: none; border-radius: 8px; box-sizing: border-box; c=
+olor: #ffffff !important; cursor: pointer; display: inline-block; font-fami=
+ly: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helve=
+tica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI S=
+ymbol'; font-size: 14px; font-weight: 600; height: auto; line-height: 20px;=
+ margin: 0 auto; opacity: 1; outline: none; padding: 12px 20px; text-align:=
+ center; text-decoration: none !important; white-space: nowrap;"><span styl=
+e=3D"color: #ffffff; text-decoration: none;">Pledge your support</span></a>=
+</p></div></div></div></div></div><div class=3D"container-border" style=3D"=
+border-top: 1px solid #e6e6e6; box-sizing: border-box; font-size: 16px; lin=
+e-height: 26px; margin: 32px 0 0; width: 100%;"></div><div class=3D"post-ct=
+a typography markup" style=3D"font-family: 'SF Pro Display', -apple-system,=
+ system-ui, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, Helvetica, Ari=
+al, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; f=
+ont-size: 16px; font-weight: 400; line-height: 26px; margin: 32px 0; margin=
+-bottom: 32px; text-align: initial; word-break: break-word;"><p style=3D"co=
+lor: rgb(54, 55, 55); font-size: 16px; line-height: 26px; margin: 0 auto 20=
+px; margin-top: 0; text-align: center; width: 90%;"><span translated class=
+=3D"pencraft pc-reset _reset_3axfk_1" style=3D"color: unset; list-style: no=
+ne; margin: 0; text-decoration: unset;">Amigoscode Newsletter is free today=
+=2E But if you enjoyed this post, you c=
+an tell Amigoscode Newsletter that the=
+ir writing is valuable by pledging a future subscription. You won't be char=
+ged unless they enable payments.</span></p><p class=3D"cta-box" style=3D"co=
+lor: rgb(54, 55, 55); font-size: 16px; line-height: 26px; margin: 0 auto 20=
+px; margin-bottom: 0; margin-left: auto; margin-right: auto; text-align: ce=
+nter; width: 90%;"><a role=3D"button" href=3D"https://substack.com/redirect=
+/2/eyJlIjoiaHR0cHM6Ly9ibG9nLmFtaWdvc2NvZGUuY29tL3N1YnNjcmliZT91dG1fc291cmNl=
+PXBvc3QmdXRtX2NhbXBhaWduPWVtYWlsLWNoZWNrb3V0Jm5leHQ9aHR0cHMlM0ElMkYlMkZibG9=
+nLmFtaWdvc2NvZGUuY29tJTJGcCUyRnRoZS10ZXN0aW5nLXB5cmFtaWQmcj0zamJmOTAiLCJwIj=
+oxNDczNjU4NzcsInMiOjEzNTUyMjYsImYiOnRydWUsInUiOjIxMzg0NDIxMiwiaWF0IjoxNzIyO=
+DczODUxLCJleHAiOjE3MjU0NjU4NTEsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVj=
+dCJ9.rtCqmHI1zH7U_AO5EYPdESQiYhJRmZyYm8AAkzHxL_w?&utm_source=3Dsubstack&utm=
+_medium=3Demail&utm_content=3Dpostcta" class=3D"button primary" style=3D"ba=
+ckground-color: #7f56d9; border: none; border-radius: 8px; box-sizing: bord=
+er-box; color: #ffffff !important; cursor: pointer; display: inline-block; =
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Robo=
+to, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'S=
+egoe UI Symbol'; font-size: 14px; font-weight: 600; height: 40px; line-heig=
+ht: 20px; margin: 0; opacity: 1; outline: none; padding: 10px 20px; text-al=
+ign: center; text-decoration: none !important; white-space: nowrap;">Pledge=
+ your support</a></p></div><table role=3D"presentation" width=3D"100%" bord=
+er=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"email-ufi-2-bottom" s=
+tyle=3D"border-bottom: 1px solid rgb(0, 0, 0, .1); border-top: 1px solid rg=
+b(0, 0, 0, .1); min-width: 100%;"><tr height=3D"16"><td height=3D"16" style=
+=3D"font-size: 0px; line-height: 0;">&#160;</td></tr><tr><td><table role=3D=
+"presentation" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0"><tr><td><table role=3D"presentation" width=3D"auto" border=3D"0" cellsp=
+acing=3D"0" cellpadding=3D"0" style=3D"margin: 0 auto;"><tr><td style=3D"ve=
+rtical-align: middle;"><table role=3D"presentation" width=3D"auto" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><td align=3D"center"><a href=
+=3D"https://substack.com/app-link/post?publication_id=3D1355226&post_id=3D1=
+47365877&utm_source=3Dsubstack&isFreemail=3Dtrue&submitLike=3Dtrue&token=3D=
+eyJ1c2VyX2lkIjoyMTM4NDQyMTIsInBvc3RfaWQiOjE0NzM2NTg3NywicmVhY3Rpb24iOiLinaQ=
+iLCJpYXQiOjE3MjI4NzM4NTEsImV4cCI6MTcyNTQ2NTg1MSwiaXNzIjoicHViLTEzNTUyMjYiLC=
+JzdWIiOiJyZWFjdGlvbiJ9.tb1x3-8nnQNhjGusyi6zFCLR4wPTPZkNN4N5jfxtz98&utm_medi=
+um=3Demail&utm_campaign=3Demail-reaction&r=3D3jbf90" class=3D"email-button-=
+outline" style=3D"border: 1px solid rgb(0, 0, 0, .1); border-radius: 9999px=
+; color: rgb(119, 119, 119); display: inline-block; font-family: system-ui,=
+ -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, s=
+ans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-s=
+ize: 12px; font-weight: 500; line-height: 12px; padding: 9px 14px; text-dec=
+oration: none; text-transform: uppercase;"><img src=3D"https://substackcdn.=
+com/image/fetch/w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3=
+A%2F%2Fsubstack.com%2Ficon%2FLucideHeart%3Fv%3D4%26height%3D36%26fill%3Dnon=
+e%26stroke%3D%2523808080%26strokeWidth%3D2" width=3D"18" height=3D"18" styl=
+e=3D"border: none !important; margin-right: 8px; max-width: 18px; min-heigh=
+t: 18px; min-width: 18px; vertical-align: middle;" alt class=3D"icon"><span=
+ class=3D"email-button-text" style=3D"vertical-align: middle;">Like</span><=
+/a></td></tr></table></td><td width=3D"8" style=3D"min-width: 8px"></td><td=
+ style=3D"vertical-align: middle;"><table role=3D"presentation" width=3D"au=
+to" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><td align=3D"cente=
+r"><a href=3D"https://substack.com/app-link/post?publication_id=3D1355226&p=
+ost_id=3D147365877&utm_source=3Dsubstack&utm_medium=3Demail&isFreemail=3Dtr=
+ue&comments=3Dtrue&token=3DeyJ1c2VyX2lkIjoyMTM4NDQyMTIsInBvc3RfaWQiOjE0NzM2=
+NTg3NywiaWF0IjoxNzIyODczODUxLCJleHAiOjE3MjU0NjU4NTEsImlzcyI6InB1Yi0xMzU1MjI=
+2Iiwic3ViIjoicG9zdC1yZWFjdGlvbiJ9.ZfkLMAIAo5DG80HLzN3GlJ-Xj-z3HZ3KtmOKlzsg7=
+6g&r=3D3jbf90&utm_campaign=3Demail-half-magic-comments&utm_source=3Dsubstac=
+k&utm_medium=3Demail" class=3D"email-button-outline" style=3D"border: 1px s=
+olid rgb(0, 0, 0, .1); border-radius: 9999px; color: rgb(119, 119, 119); di=
+splay: inline-block; font-family: system-ui, -apple-system, BlinkMacSystemF=
+ont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',=
+ 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 12px; font-weight: 500; li=
+ne-height: 12px; padding: 9px 14px; text-decoration: none; text-transform: =
+uppercase;"><img src=3D"https://substackcdn.com/image/fetch/w_36,c_scale,f_=
+png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLu=
+cideComments%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26s=
+trokeWidth%3D2" width=3D"18" height=3D"18" style=3D"border: none !important=
+; margin-right: 8px; max-width: 18px; min-height: 18px; min-width: 18px; ve=
+rtical-align: middle;" alt class=3D"icon"><span class=3D"email-button-text"=
+ style=3D"vertical-align: middle;">Comment</span></a></td></tr></table></td=
+><td width=3D"8" style=3D"min-width: 8px"></td><td style=3D"vertical-align:=
+ middle;"><table role=3D"presentation" width=3D"auto" border=3D"0" cellspac=
+ing=3D"0" cellpadding=3D"0"><tr><td align=3D"center"><a href=3D"https://sub=
+stack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9vcGVuLnN1YnN0YWNrLmNvbS9wdWIvYW1pZ2=
+9zY29kZS9wL3RoZS10ZXN0aW5nLXB5cmFtaWQ_dXRtX3NvdXJjZT1zdWJzdGFjayZ1dG1fbWVka=
+XVtPWVtYWlsJnV0bV9jYW1wYWlnbj1lbWFpbC1yZXN0YWNrLWNvbW1lbnQmYWN0aW9uPXJlc3Rh=
+Y2stY29tbWVudCZyPTNqYmY5MCZ0b2tlbj1leUoxYzJWeVgybGtJam95TVRNNE5EUXlNVElzSW5=
+CdmMzUmZhV1FpT2pFME56TTJOVGczTnl3aWFXRjBJam94TnpJeU9EY3pPRFV4TENKbGVIQWlPak=
+UzTWpVME5qVTROVEVzSW1semN5STZJbkIxWWkweE16VTFNakkySWl3aWMzVmlJam9pY0c5emRDM=
+XlaV0ZqZEdsdmJpSjkuWmZrTE1BSUFvNURHODBITHpOM0dsSi1Yai16M0haM0t0bU9LbHpzZzc2=
+ZyIsInAiOjE0NzM2NTg3NywicyI6MTM1NTIyNiwiZiI6dHJ1ZSwidSI6MjEzODQ0MjEyLCJpYXQ=
+iOjE3MjI4NzM4NTEsImV4cCI6MTcyNTQ2NTg1MSwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLX=
+JlZGlyZWN0In0.3QjQCFK3PxEQquyG6-kB0TeLgbZhGNRlggFtEKFUR54?&utm_source=3Dsub=
+stack&utm_medium=3Demail" class=3D"email-button-outline" style=3D"border: 1=
+px solid rgb(0, 0, 0, .1); border-radius: 9999px; color: rgb(119, 119, 119)=
+; display: inline-block; font-family: system-ui, -apple-system, BlinkMacSys=
+temFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emo=
+ji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 12px; font-weight: 500=
+; line-height: 12px; padding: 9px 14px; text-decoration: none; text-transfo=
+rm: uppercase;"><img src=3D"https://substackcdn.com/image/fetch/w_36,c_scal=
+e,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%=
+2FNoteForwardIcon%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%252380808=
+0%26strokeWidth%3D2" width=3D"18" height=3D"18" style=3D"border: none !impo=
+rtant; margin-right: 8px; max-width: 18px; min-height: 18px; min-width: 18p=
+x; vertical-align: middle;" alt class=3D"icon"><span class=3D"email-button-=
+text" style=3D"vertical-align: middle;">Restack</span></a></td></tr></table=
+></td></tr></table></td><td align=3D"right"><table role=3D"presentation" wi=
+dth=3D"auto" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr></tr></ta=
+ble></td></tr></table></td></tr><tr height=3D"16"><td height=3D"16" style=
+=3D"font-size: 0px; line-height: 0;">&#160;</td></tr></table><div class=3D"=
+footer _footer_11ym1_1" style=3D"color: rgb(119, 119, 119); font-size: 16px=
+; line-height: 26px; padding: 24px 0; text-align: center;"><div style=3D"fo=
+nt-size: 16px; line-height: 26px; padding-bottom: 24px;"><p class=3D"pencra=
+ft pc-reset _color-secondary_3axfk_186 _size-12_3axfk_40 _reset_3axfk_1 sma=
+ll _meta_11ym1_14" style=3D"color: rgb(119, 119, 119); font-family: system-=
+ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial=
+, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; fon=
+t-size: 12px; letter-spacing: 0px; line-height: 16px; list-style: none; mar=
+gin: 0; padding-bottom: 0; text-decoration: unset;">&#169; 2024 <span>Amigo=
+scode</span><br>The Account Box The Media Centre, 7 Northumberland Street, =
+Huddersfield, England, HD1 1RL <br><a href=3D"https://substack.com/redirect=
+/2/eyJlIjoiaHR0cHM6Ly9ibG9nLmFtaWdvc2NvZGUuY29tL2FjdGlvbi9kaXNhYmxlX2VtYWls=
+P3Rva2VuPWV5SjFjMlZ5WDJsa0lqb3lNVE00TkRReU1USXNJbkJ2YzNSZmFXUWlPakUwTnpNMk5=
+UZzNOeXdpYVdGMElqb3hOekl5T0Rjek9EVXhMQ0psZUhBaU9qRTNOVFEwTURrNE5URXNJbWx6Y3=
+lJNkluQjFZaTB4TXpVMU1qSTJJaXdpYzNWaUlqb2laR2x6WVdKc1pWOWxiV0ZwYkNKOS42cHlVd=
+FU3aDBaZFZmbjlLVDFLTWs0N3hrSHVNOTYtc1c3aG40ODFwR2pZIiwicCI6MTQ3MzY1ODc3LCJz=
+IjoxMzU1MjI2LCJmIjp0cnVlLCJ1IjoyMTM4NDQyMTIsImlhdCI6MTcyMjg3Mzg1MSwiZXhwIjo=
+xNzI1NDY1ODUxLCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.yl4cyVHh7_N=
+gZ7MngZxBscoTpq4L0M8StjPFoVi45XM?" style=3D"color: rgb(119, 119, 119); text=
+-decoration: underline;"><span style=3D"color: rgb(119, 119, 119); text-dec=
+oration: underline;">Unsubscribe</span></a></p></div><p class=3D"_footerSec=
+tion_11ym1_5 small powered-by-substack" style=3D"color: rgb(119, 119, 119);=
+ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Rob=
+oto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', '=
+Segoe UI Symbol'; font-size: 12px; line-height: 20px; margin: 0; margin-top=
+: 0; padding: 0 24px; padding-bottom: 0;"><a href=3D"https://substack.com/r=
+edirect/c8e40cc8-9095-4e27-8a6f-e20cf4ff6cca?j=3DeyJ1IjoiM2piZjkwIn0.SANLSv=
+acVpokI3GQinRJ38eMn_sW279gjfrxhQGBbiM" style=3D"color: rgb(119, 119, 119); =
+display: inline-block; margin: 0 4px; text-decoration: none;"><img src=3D"h=
+ttps://substackcdn.com/image/fetch/w_262,c_limit,f_auto,q_auto:good,fl_prog=
+ressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fgeneric-app-button=
+%402x.png" srcset=3D"https://substackcdn.com/image/fetch/w_131,c_limit,f_au=
+to,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femai=
+l%2Fgeneric-app-button.png, https://substackcdn.com/image/fetch/w_262,c_lim=
+it,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg=
+%2Femail%2Fgeneric-app-button%402x.png 2x, https://substackcdn.com/image/fe=
+tch/w_393,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsub=
+stack.com%2Fimg%2Femail%2Fgeneric-app-button%403x.png 3x" width=3D"131" alt=
+=3D"Get the app" height=3D"40" style=3D"border: none !important; max-width:=
+ 550px; vertical-align: middle;"></a><a href=3D"https://substack.com/redire=
+ct/2/eyJlIjoiaHR0cHM6Ly9zdWJzdGFjay5jb20vc2lnbnVwP3V0bV9zb3VyY2U9c3Vic3RhY2=
+smdXRtX21lZGl1bT1lbWFpbCZ1dG1fY29udGVudD1mb290ZXImdXRtX2NhbXBhaWduPWF1dG9ma=
+WxsZWQtZm9vdGVyJmZyZWVTaWdudXBFbWFpbD1zb3VmaWFuZS5hbG91aWVsaWRyaXNzaUBldHUu=
+dWFlLmFjLm1hJnI9M2piZjkwIiwicCI6MTQ3MzY1ODc3LCJzIjoxMzU1MjI2LCJmIjp0cnVlLCJ=
+1IjoyMTM4NDQyMTIsImlhdCI6MTcyMjg3Mzg1MSwiZXhwIjoxNzI1NDY1ODUxLCJpc3MiOiJwdW=
+ItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.G15XCRftVZJ-F6KGKVPd1JdxfUDlqKyP8dBvxw=
+USCNU?" style=3D"color: rgb(119, 119, 119); display: inline-block; margin: =
+0 4px; text-decoration: none;"><img src=3D"https://substackcdn.com/image/fe=
+tch/w_270,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsub=
+stack.com%2Fimg%2Femail%2Fpublish-button%402x.png" srcset=3D"https://substa=
+ckcdn.com/image/fetch/w_135,c_limit,f_auto,q_auto:good,fl_progressive:steep=
+/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button.png, https://sub=
+stackcdn.com/image/fetch/w_270,c_limit,f_auto,q_auto:good,fl_progressive:st=
+eep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button%402x.png 2x, =
+https://substackcdn.com/image/fetch/w_405,c_limit,f_auto,q_auto:good,fl_pro=
+gressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button%40=
+3x.png 3x" width=3D"135" alt=3D"Start writing" height=3D"40" style=3D"borde=
+r: none !important; max-width: 550px; vertical-align: middle;"></a></p></di=
+v></div></td><td></td></tr></table><img src=3D"https://eotrx.substackcdn.co=
+m/open?token=3DeyJtIjoiPDIwMjQwODA1MTYwMTAzLjMuYWYwMWY3NmZiMjFlYzlkNEBtZy1k=
+MC5zdWJzdGFjay5jb20-IiwidSI6MjEzODQ0MjEyLCJyIjoic291ZmlhbmUuYWxvdWllbGlkcml=
+zc2lAZXR1LnVhZS5hYy5tYSIsImQiOiJtZy1kMC5zdWJzdGFjay5jb20iLCJwIjoxNDczNjU4Nz=
+csInQiOiJuZXdzbGV0dGVyIiwiYSI6ImV2ZXJ5b25lIiwicyI6MTM1NTIyNiwiYyI6InBvc3QiL=
+CJmIjp0cnVlLCJwb3NpdGlvbiI6ImJvdHRvbSIsImlhdCI6MTcyMjg3Mzg1MiwiZXhwIjoxNzI1=
+NDY1ODUyLCJpc3MiOiJwdWItMCIsInN1YiI6ImVvIn0.91hCf3up9cORypqISkiFEtU-o1YNBji=
+jHcva1kJW2sU" alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"heigh=
+t:1px !important;width:1px !important;border-width:0 !important;margin-top:=
+0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-le=
+ft:0 !important;padding-top:0 !important;padding-bottom:0 !important;paddin=
+g-right:0 !important;padding-left:0 !important;"/><img width=3D"1px" height=
+=3D"1px" alt=3D"" src=3D"https://email.mg-d0.substack.com/o/eJxEkFuq5CAURUd=
+T_rX4TFIfjiUc9Zg-dNTCRzWZ_aUecH_XhsViBxh41Ha5R-2DRbdoSDYydHJValv1Zg3DDHTuBx=
+ZsMDDuMH5XpY1gf10M1ixSWYFJbai1TmtI3gYhvQd5D4ycEsqITVi5CCk01xySkGldklcSwz2am=
+xH5-BMF79P3AeEfDzUz6ntq-E5wo01kr9AdZiQsAR0-sV21fDFFJ82qF7ut64eM64Gu4P9-4hjY=
+2GP6PdScZ6Fx7VjAnxi_4ulPCjColrdIW6vUwprrdSaCghzOOglPio16p5sROCafgBwCz8D69LF=
+moOIg01F7qBHZ-Dw7O7aXVUm9GaOkYk-nfgIAAP__c59_ZQ"></body></html>
+--236ff98aef600d22c98507f6fdcc11792bcbe9371641091054dce2b69c45--
