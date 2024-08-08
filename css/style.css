@@ -241,11 +241,24 @@
   text-align: center;
 }
 
+.info a {
+  text-decoration: none;
+}
+ 
 .info h3 {
   color:#0a49f6  ;
   font-size: 1.2em;
   font-weight: 700;
   margin: 10px;
+}
+
+.info2 a {
+  text-decoration: none;
+  color: black;
+}
+
+.info2 a:hover {
+  color:#0a49f6  ;
 }
 
 .aboutme-card {
