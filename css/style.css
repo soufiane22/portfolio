@@ -338,6 +338,14 @@ ul{
   display: flex;
 }
 
+.teck{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin-inline: 15px;
+}
+
 /* ------------------- Project 2 style -------------- */
 .carousel-imgs{
   min-height: 80vh;
@@ -611,6 +619,14 @@ ul{
 .contact-from {
   width: 100% ;
   overflow: hidden;
+}
+
+.technologies{
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.teck{
+  margin-block: 10px;
 }
 
 }
