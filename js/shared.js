@@ -16,6 +16,8 @@ document.write(`<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"
 
 $(document).ready(function () {
     AOS.init();
+    // $("#loading-screen").fadeOut("slow");
+
 
     // Handel the sidebar toggled  
     $('.navTrigger').click(function () {
@@ -129,6 +131,13 @@ $(document).ready(function () {
 
         });
     });
+
+
+
+    $(window).on('load', function() {
+        // Hide the loading screen when the window is fully loaded
+        $("#loading-screen").fadeOut(200);
+      });
 });
 
 // Scroll to top function
