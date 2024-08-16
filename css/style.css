@@ -402,6 +402,9 @@ ul {
   font-style: normal;
   padding: 3rem;
 }
+.contact_icon{
+  color:#0088e2;
+}
 
 input,
 textarea {
